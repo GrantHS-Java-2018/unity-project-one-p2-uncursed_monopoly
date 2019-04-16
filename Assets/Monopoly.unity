@@ -477,6 +477,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: 02703c519eceea84da6e98e94871dddb, type: 3}
   - {fileID: 21300010, guid: 02703c519eceea84da6e98e94871dddb, type: 3}
   value: 0
+  Player1: {fileID: 0}
 --- !u!1001 &108904106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1711,6 +1712,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: 02703c519eceea84da6e98e94871dddb, type: 3}
   - {fileID: 21300010, guid: 02703c519eceea84da6e98e94871dddb, type: 3}
   value: 0
+  Player1: {fileID: 0}
 --- !u!1001 &1031742936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2916,7 +2918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -537, y: -264}
+  m_AnchoredPosition: {x: 338, y: -89}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609539261
@@ -3010,14 +3012,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff25320ee08b414abdd1af1a00f83d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
   rollButtonPress: 0
   pressRoll: 0
   m_YourFirstButton: {fileID: 1609539261}
   dice1: {fileID: 1018770731}
   dice2: {fileID: 108618999}
   Player1: {fileID: 0}
+  totalDice: 0
 --- !u!1 &1624245676 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2740009375989766271, guid: ca6907cc6c075a34e8c9e82b1a37c393,

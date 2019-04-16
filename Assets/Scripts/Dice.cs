@@ -10,8 +10,7 @@ public class Dice : MonoBehaviour
     [SerializeField]private Sprite[] dieFace;
     //[SerializeField] private Button button;
     public int value;
-
-   
+    public GameObject Player1;
 
     // Start is called before the first frame update
     void Awake ()
@@ -41,5 +40,8 @@ public class Dice : MonoBehaviour
             value = num;
             yield return new WaitForSeconds(.15f);
         }
+        
+        //StartCoroutine(Player1.GetComponent<Player>().followWaypoints());
+        Player1.GetComponent<Player>().followWaypoints();
     }
 }
