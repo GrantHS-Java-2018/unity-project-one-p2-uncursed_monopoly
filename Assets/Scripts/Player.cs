@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private int waypointIndex = 0;
     public int stopRolling = 1; 
     int doublesCounter = 0;
+    public GameObject jailWaypoint;
     void Start()
     {
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x, waypointArray[waypointIndex].transform.position.y, 0);
@@ -52,8 +53,17 @@ public class Player : MonoBehaviour
                  if (doublesCounter < 3)
                          {
                              doublesCounter++;
-                             //GetComponent<Renderer>().enabled = true;
-                             Button.SetActive(true);   
+                             if (doublesCounter == 3)
+                             {
+                                 transform.position = new Vector3(jailWaypoint.transform.position.x,
+                                     waypointArray[waypointIndex + 1].transform.position.y, 0);
+                                 Button.SetActive(false); 
+                             }
+                             else
+                             {
+                                 //GetComponent<Renderer>().enabled = true;
+                                 Button.SetActive(true);
+                             }
                          }
                          else
                          {
