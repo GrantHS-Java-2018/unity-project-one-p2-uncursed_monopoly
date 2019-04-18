@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
@@ -13,7 +14,8 @@ public class Player : MonoBehaviour
     private Waypoint currentWaypoint;
     private int currentLocation = 0;
     private int waypointIndex = 0;
-    public int stopRolling = 1;
+    public int stopRolling = 1; 
+    int doublesCounter = 0;
     void Start()
     {
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x, waypointArray[waypointIndex].transform.position.y, 0);
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
     {
         if (stopRolling == 1)
         {
+            Doubles();
             for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
             {
                 transform.position = new Vector3(waypointArray[waypointIndex + 1].transform.position.x,
@@ -38,7 +41,39 @@ public class Player : MonoBehaviour
         {
             stopRolling = 1;
         }
+
+       
+         void Doubles()
+         {
+             Boolean doubles;
+             if (dice2.GetComponent<Dice>().value == dice1.GetComponent<Dice>().value)
+             {
+                 doubles = true;
+                 if (doublesCounter < 3)
+                         {
+                             doublesCounter++;
+                             //GetComponent<Renderer>().enabled = true;
+                             Button.SetActive(true);   
+                         }
+                         else
+                         {
+                             //GetComponent<Renderer>().enabled = false;
+                             Button.SetActive(false); 
+                             doublesCounter = 0;
+                         }
+             }
+             else
+             {
+                 doubles = false;
+                 Button.SetActive(false); 
+             }
+             
+        
+        }
+
+        
     }
+
     void Update()
     {
         
