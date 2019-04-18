@@ -14,7 +14,7 @@ public class Dice : MonoBehaviour
     public GameObject Player2;
     public GameObject Player3;
     public int turn = 1;
-
+    public GameObject Button;
     // Start is called before the first frame update
     void Awake ()
     {
@@ -60,5 +60,8 @@ public class Dice : MonoBehaviour
             Player3.GetComponent<Player>().followWaypoints();
             
         }
+        Button.SetActive(true);
+
+        
     }
 }
