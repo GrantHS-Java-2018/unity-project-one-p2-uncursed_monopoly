@@ -12,7 +12,8 @@ public class RollButton : MonoBehaviour
     public Button m_YourFirstButton;
     public GameObject dice1, dice2;
     public GameObject Player1;
-
+    int doublesCounter = 0;
+    GameObject Button;
     public int totalDice;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,8 @@ public class RollButton : MonoBehaviour
         //Debug.Log("You have clicked the button!");
 
     }
+
+    
 
 
     // Update is called once per frame
