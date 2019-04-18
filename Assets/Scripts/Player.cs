@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+// using NUnit.Framework.Internal;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -14,11 +17,69 @@ public class Player : MonoBehaviour
     private int currentLocation = 0;
     private int waypointIndex = 0;
     public int stopRolling = 1;
+    public int wallet = 1500;
+    public String ownership;
+    
+    
+    
+    
+    
+    
+    // placeholders / future //
+
+    public String tileType;
+    public int rentvalue;
+
+    void actions(){
+    }
+
+     void ownerCheck()
+    {
+    }
+
+
+
+     void CCorChance()
+    {
+    }
+
+    // end of placeholdes // 
+
+     void payrent()
+    {
+        wallet = wallet - rentvalue;
+        
+    }
+    
     void Start()
     {
+        
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x, waypointArray[waypointIndex].transform.position.y, 0);
+        
+        ownerCheck(); // placeholder//
 
+        if (ownership == "available"){
+            
+        }
+        if (ownership == "yours"){
+            actions(); // placeholder//
+            }
+
+        if (ownership == "theirs"){
+            payrent(); // placehholder//
+            actions();
+        }
+
+        if (ownership == "unownable")
+        {
+            if (tileType == "CC" & tileType == "Chance")  {
+                CCorChance();
+            }
+            actions();
+        }
     }
+    
+    
     
     // Update is called once per frame
     public void followWaypoints()
@@ -43,4 +104,9 @@ public class Player : MonoBehaviour
     {
         
     }
+
+    
+    
+    
+
 }
