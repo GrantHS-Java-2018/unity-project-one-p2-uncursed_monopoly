@@ -11,7 +11,10 @@ public class Dice : MonoBehaviour
     //[SerializeField] private Button button;
     public int value;
     public GameObject Player1;
-
+    public GameObject Player2;
+    public GameObject Player3;
+    public int turn = 1;
+    public GameObject Button;
     // Start is called before the first frame update
     void Awake ()
     {
@@ -42,6 +45,23 @@ public class Dice : MonoBehaviour
         }
         
         //StartCoroutine(Player1.GetComponent<Player>().followWaypoints());
-        Player1.GetComponent<Player>().followWaypoints();
+        if (turn == 1)
+        {
+            Player1.GetComponent<Player>().followWaypoints();
+           
+        }
+        else if (turn == 2)
+        {
+            Player2.GetComponent<Player>().followWaypoints();
+           
+        }
+        else if (turn == 3)
+        {
+            Player3.GetComponent<Player>().followWaypoints();
+            
+        }
+        Button.SetActive(true);
+
+        
     }
 }

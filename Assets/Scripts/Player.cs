@@ -15,12 +15,13 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] waypointArray;
     private Waypoint currentWaypoint;
+    public GameObject jailWaypoint;
     private int currentLocation = 0;
     private int waypointIndex;
     public int stopRolling = 1;
     public int wallet = 1500;
     public String ownership;
-
+    public int doublesCounter = 0;
 
 
 
@@ -69,6 +70,7 @@ public class Player : MonoBehaviour
         // Update is called once per frame
          public void followWaypoints()
         {
+            Doubles();
             if (stopRolling == 1)
             {
                 for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
@@ -79,6 +81,15 @@ public class Player : MonoBehaviour
                 }
 
                 stopRolling = 2;
+                if (GetComponent<Dice>().turn == 1 || GetComponent<Dice>().turn == 2)
+                {
+                    GetComponent<Dice>().turn++;
+                }
+                else if (GetComponent<Dice>().turn == 3)
+                {
+                    GetComponent<Dice>().turn = 1;
+                }
+                Button.SetActive(true);
             }
             else
             {
@@ -86,9 +97,46 @@ public class Player : MonoBehaviour
             }
         }
 
-        void Update()
-        {
+         void Update()
+         {
 
+         }
+
+         void Doubles()
+         {
+             Boolean doubles;
+             if (dice2.GetComponent<Dice>().value == dice1.GetComponent<Dice>().value)
+             {
+                 doubles = true;
+                 if (doublesCounter < 3)
+                         {
+                             doublesCounter++;
+                             if (doublesCounter == 3)
+                             {
+                                 transform.position = new Vector3(jailWaypoint.transform.position.x,
+                                     waypointArray[waypointIndex + 1].transform.position.y, 0);
+                                 Button.SetActive(false); 
+                             }
+                             else
+                             {
+                                 //GetComponent<Renderer>().enabled = true;
+                                 Button.SetActive(true);
+                             }
+                         }
+                         else
+                         {
+                             //GetComponent<Renderer>().enabled = false;
+                             Button.SetActive(false); 
+                             doublesCounter = 0;
+                         }
+             }
+             else
+             {
+                 doubles = false;
+                 Button.SetActive(false); 
+             }
+             
+        
         }
 
 
