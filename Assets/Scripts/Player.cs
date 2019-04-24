@@ -76,10 +76,26 @@ public class Player : MonoBehaviour
             Debug.Log("movement");
             for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
             {
-                transform.position = new Vector3(waypointArray[waypointIndex + 1].transform.position.x,
-                    waypointArray[waypointIndex + 1].transform.position.y, 0);
-                waypointIndex++;
+                if (waypointIndex == 39)
+                {
+                    transform.position = new Vector3(waypointArray[0].transform.position.x,
+                        waypointArray[0].transform.position.y, 0);
+                    waypointIndex = 0;
+                }
+                else
+                {
+                    transform.position = new Vector3(waypointArray[waypointIndex + 1].transform.position.x,
+                        waypointArray[waypointIndex + 1].transform.position.y, 0);
+                    waypointIndex++;
+                }
+
+                if (waypointIndex == 0)
+                {
+                    wallet = wallet + 200;
+                }
+
             }
+            //METHOD FOR AREAS ON BOARD
 
             stopRolling = 2;
             /*
