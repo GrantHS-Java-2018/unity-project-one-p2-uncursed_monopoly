@@ -21,9 +21,9 @@ public class Player : MonoBehaviour
     public int stopRolling = 1;
     public int wallet = 1500;
     private int doublesCounter = 0;
-    public String ownership;
-
-
+    //public String ownership;
+    public bool[] Ownership;
+    public GameObject[] propertArray;
 
 
 
@@ -95,7 +95,8 @@ public class Player : MonoBehaviour
                 }
 
             }
-            //METHOD FOR AREAS ON BOARD
+
+            WaypointLocation();
 
             stopRolling = 2;
             /*
@@ -175,6 +176,15 @@ public class Player : MonoBehaviour
             return false;
             //Button.SetActive(false); 
         }
+    }
+
+    void WaypointLocation()
+    {
+        if (waypointIndex == 1) //Brown1
+        {
+   
+        }
+        
     }
 
 
