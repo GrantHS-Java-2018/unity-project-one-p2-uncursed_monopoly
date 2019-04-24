@@ -48,17 +48,50 @@ public class Dice : MonoBehaviour
         if (turn == 1)
         {
             Player1.GetComponent<Player>().followWaypoints();
-           
-        }
+            Debug.Log("turn 1 roll");
+            //Player1.GetComponent<Player>().Doubles();
+            Debug.Log("turn 1 roll end");
+            if (Player1.GetComponent<Player>().Doubles())
+            {
+                
+            }
+            else
+            {
+                turn++;
+            }
+               
+        
+    }
         else if (turn == 2)
         {
             Player2.GetComponent<Player>().followWaypoints();
+            Debug.Log("turn 2 roll");
+            //Player2.GetComponent<Player>().Doubles();
+            Debug.Log("turn 2 roll end");
+            if (Player2.GetComponent<Player>().Doubles())
+            {
+                
+            }
+            else
+            {
+                turn++;
+            }
            
         }
         else if (turn == 3)
         {
             Player3.GetComponent<Player>().followWaypoints();
-            
+            Debug.Log("turn 3 roll");
+            //Player3.GetComponent<Player>().Doubles();
+            Debug.Log("turn 3 roll end");
+            if (Player3.GetComponent<Player>().Doubles())
+            {
+                
+            }
+            else
+            {
+                turn = 1;
+            }
         }
         Button.SetActive(true);
 

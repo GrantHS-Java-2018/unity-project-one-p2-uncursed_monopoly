@@ -20,8 +20,8 @@ public class Player : MonoBehaviour
     private int waypointIndex;
     public int stopRolling = 1;
     public int wallet = 1500;
+    private int doublesCounter = 0;
     public String ownership;
-    public int doublesCounter = 0;
 
 
 
@@ -67,101 +67,128 @@ public class Player : MonoBehaviour
 
 
 
-        // Update is called once per frame
-         public void followWaypoints()
+    // Update is called once per frame
+    public void followWaypoints()
+    {
+        //Doubles();
+        if (stopRolling == 1)
         {
-            Doubles();
-            if (stopRolling == 1)
+            Debug.Log("movement");
+            for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
             {
-                for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
-                {
-                    transform.position = new Vector3(waypointArray[waypointIndex + 1].transform.position.x,
-                        waypointArray[waypointIndex + 1].transform.position.y, 0);
-                    waypointIndex++;
-                }
+                transform.position = new Vector3(waypointArray[waypointIndex + 1].transform.position.x,
+                    waypointArray[waypointIndex + 1].transform.position.y, 0);
+                waypointIndex++;
+            }
 
-                stopRolling = 2;
-                if (GetComponent<Dice>().turn == 1 || GetComponent<Dice>().turn == 2)
+            stopRolling = 2;
+            /*
+           if (GetComponent<Dice>().turn == 1 || GetComponent<Dice>().turn == 2)
+            {
+                GetComponent<Dice>().turn++;
+            }
+            */
+            Button.SetActive(true);
+            /*
+            if (GetComponent<Dice>().turn == 1)
+            {
+                GetComponent<Dice>().turn = 2;
+                Debug.Log("turn 1");
+            }
+            
+            else if (GetComponent<Dice>().turn == 2)
+            {
+                GetComponent<Dice>().turn = 3;
+                Debug.Log("turn 2");
+            }
+            
+            else if (GetComponent<Dice>().turn == 3)
+            {
+                GetComponent<Dice>().turn = 1;
+                Debug.Log("turn 3");
+            }
+            */
+
+        }
+        else
+        {
+            stopRolling = 1;
+        }
+    }
+
+    void Update()
+    {
+
+    }
+
+
+    public bool Doubles()
+    {
+        Debug.Log("Doubles");
+
+        bool doubles;
+        if (dice2.GetComponent<Dice>().value == dice1.GetComponent<Dice>().value)
+        {
+            if (doublesCounter < 3)
+            {
+                doublesCounter++;
+                if (doublesCounter == 3)
                 {
-                    GetComponent<Dice>().turn++;
+                    transform.position = new Vector3(jailWaypoint.transform.position.x,
+                        waypointArray[waypointIndex + 1].transform.position.y, 0);
+                    //Button.SetActive(false); 
+                    return false;
                 }
-                else if (GetComponent<Dice>().turn == 3)
+                else
                 {
-                    GetComponent<Dice>().turn = 1;
+                    //GetComponent<Renderer>().enabled = true                                 
+                    Button.SetActive(true);
+                    return true;
                 }
-                Button.SetActive(true);
             }
             else
             {
-                stopRolling = 1;
+                //GetComponent<Renderer>().enabled = false;
+                //Button.SetActive(false); 
+                doublesCounter = 0;
+                return false;
             }
         }
-
-         void Update()
-         {
-
-         }
-
-         void Doubles()
-         {
-             Boolean doubles;
-             if (dice2.GetComponent<Dice>().value == dice1.GetComponent<Dice>().value)
-             {
-                 doubles = true;
-                 if (doublesCounter < 3)
-                         {
-                             doublesCounter++;
-                             if (doublesCounter == 3)
-                             {
-                                 transform.position = new Vector3(jailWaypoint.transform.position.x,
-                                     waypointArray[waypointIndex + 1].transform.position.y, 0);
-                                 Button.SetActive(false); 
-                             }
-                             else
-                             {
-                                 //GetComponent<Renderer>().enabled = true;
-                                 Button.SetActive(true);
-                             }
-                         }
-                         else
-                         {
-                             //GetComponent<Renderer>().enabled = false;
-                             Button.SetActive(false); 
-                             doublesCounter = 0;
-                         }
-             }
-             else
-             {
-                 doubles = false;
-                 Button.SetActive(false); 
-             }
-             
-        
+        else
+        {
+            return false;
+            //Button.SetActive(false); 
         }
+    }
 
 
-        /*  
-          if (ownership == "available"){
-                  
-          }
-          if (ownership == "yours"){
-              actions(); // placeholder//
-          }
-      
-          if (ownership == "theirs"){
-              payrent(); // placehholder//
-              actions();
-          }
-      
-          if (ownership == "unownable")
-          {
-              if (tileType == "CC" & tileType == "Chance")  {
-                  CCorChance();
-              }
-              actions();
-          }
-          }
-          */
+
+
+
+
+
+/*  
+  if (ownership == "available"){
+          
+  }
+  if (ownership == "yours"){
+      actions(); // placeholder//
+  }
+
+  if (ownership == "theirs"){
+      payrent(); // placehholder//
+      actions();
+  }
+
+  if (ownership == "unownable")
+  {
+      if (tileType == "CC" & tileType == "Chance")  {
+          CCorChance();
+      }
+      actions();
+  }
+  }
+  */
         
 }
 

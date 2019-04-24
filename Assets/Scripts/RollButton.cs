@@ -12,6 +12,8 @@ public class RollButton : MonoBehaviour
     public Button m_YourFirstButton;
     public GameObject dice1, dice2;
     public GameObject Player1;
+    public GameObject Player2;
+    public GameObject Player3;
     int doublesCounter = 0;
     GameObject Button;
     public int totalDice;
@@ -23,7 +25,7 @@ public class RollButton : MonoBehaviour
     }
     void TaskOnClick()
     {
-     
+        totalDice = 0;
         rollButtonPress = true;
         //Output this to console when Button1 or Button3 is clicked
         StartCoroutine(dice1.GetComponent<Dice>().Roll());

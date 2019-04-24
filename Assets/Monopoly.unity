@@ -3447,6 +3447,8 @@ MonoBehaviour:
   dice1: {fileID: 1018770731}
   dice2: {fileID: 108618999}
   Player1: {fileID: 1350309460}
+  Player2: {fileID: 1844866514}
+  Player3: {fileID: 160705358}
   totalDice: 0
 --- !u!1 &1624245676 stripped
 GameObject:
