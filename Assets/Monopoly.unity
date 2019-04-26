@@ -942,6 +942,11 @@ PrefabInstance:
       propertyPath: jailWaypoint
       value: 
       objectReference: {fileID: 885029543}
+    - target: {fileID: 2246537015997402757, guid: e4e0ac2c14d3fce4eb71c05850a98736,
+        type: 3}
+      propertyPath: Properties
+      value: 
+      objectReference: {fileID: 1496602457}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e0ac2c14d3fce4eb71c05850a98736, type: 3}
 --- !u!1 &160705358 stripped
@@ -4110,6 +4115,11 @@ PrefabInstance:
       propertyPath: jailWaypoint
       value: 
       objectReference: {fileID: 885029543}
+    - target: {fileID: 2246537015997402757, guid: e4e0ac2c14d3fce4eb71c05850a98736,
+        type: 3}
+      propertyPath: Properties
+      value: 
+      objectReference: {fileID: 1496602457}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e0ac2c14d3fce4eb71c05850a98736, type: 3}
 --- !u!1 &1765806103 stripped
@@ -5181,5 +5191,10 @@ PrefabInstance:
       propertyPath: jailWaypoint
       value: 
       objectReference: {fileID: 885029543}
+    - target: {fileID: 2246537015997402757, guid: e4e0ac2c14d3fce4eb71c05850a98736,
+        type: 3}
+      propertyPath: Properties
+      value: 
+      objectReference: {fileID: 1496602457}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e0ac2c14d3fce4eb71c05850a98736, type: 3}
