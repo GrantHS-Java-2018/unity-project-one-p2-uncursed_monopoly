@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
+using Unity.Collections;
 //using NUnit.Framework.Internal;
 // using TMPro.EditorUtilities;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class Player : MonoBehaviour
     private Waypoint currentWaypoint;
     public GameObject jailWaypoint;
     private int currentLocation = 0;
-    private int waypointIndex;
+    public int waypointIndex;
     public int stopRolling = 1;
     public int wallet = 1500;
     private int doublesCounter = 0;
@@ -180,10 +181,35 @@ public class Player : MonoBehaviour
 
     void WaypointLocation()
     {
-        if (waypointIndex == 1) //Brown1
+        switch (waypointIndex)
         {
-   
+            case 7: case 22: case 36://chance
+
+                break;
+            case 2: case 17: case 33://cc
+
+                break;
+            case 4: case 38://tax
+
+                break;
+            case 5: case 15: case 25: case 35://railroad
+
+                break;
+            case 12: case 28://company
+
+                break;
+            case 0: case 10: case 20://visiting,go,free parking
+
+                break;
+            case 30://jail
+
+                break;
+            default://properties
+
+                break;
         }
+        
+        
         
     }
 
