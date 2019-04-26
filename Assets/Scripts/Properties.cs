@@ -28,6 +28,15 @@ public class Properties : MonoBehaviour
         if (Player1.GetComponent<Player>().waypointIndex == 1)
         {
             GetComponent<SpriteRenderer>().sprite = properyCards[0];
+            Card.SetActive (true);
+        }
+
+        switch (Player1.GetComponent<Player>().waypointIndex)
+        {
+            case 1:
+                GetComponent<SpriteRenderer>().sprite = properyCards[0];
+                break;
+            
         }
     }
     
