@@ -14,7 +14,7 @@ public class Properties : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Card.SetActive (false);
+        //Card.SetActive (false);
 
     }
 
@@ -26,6 +26,7 @@ public class Properties : MonoBehaviour
 
     public void findCard()
     {
+        Debug.Log("findCard");
         Card.SetActive (true);
         switch (Player1.GetComponent<Player>().waypointIndex)
         {

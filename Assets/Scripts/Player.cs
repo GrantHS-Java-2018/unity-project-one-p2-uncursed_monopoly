@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     //public String ownership;
     public bool[] Ownership;
     public GameObject[] propertArray;
-    public GameObject Properties;
+    public GameObject properties;
 
 
     // placeholders / future //
@@ -181,6 +181,7 @@ public class Player : MonoBehaviour
 
     void WaypointLocation()
     {
+        Debug.Log("check location " + waypointIndex);
         switch (waypointIndex)
         {
             case 7: case 22: case 36://chance
@@ -205,7 +206,7 @@ public class Player : MonoBehaviour
 
                 break;
             default://properties
-                GetComponent<Properties>().findCard();
+                //GetComponent<properties>().findCard();
                 break;
         }
         
