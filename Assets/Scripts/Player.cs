@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     //public String ownership;
     public bool[] Ownership;
     public GameObject[] propertArray;
-
+    public GameObject Properties;
 
 
     // placeholders / future //
@@ -97,9 +97,9 @@ public class Player : MonoBehaviour
 
             }
 
-            WaypointLocation();
-
+  
             stopRolling = 2;
+            WaypointLocation();
             /*
            if (GetComponent<Dice>().turn == 1 || GetComponent<Dice>().turn == 2)
             {
@@ -205,7 +205,7 @@ public class Player : MonoBehaviour
 
                 break;
             default://properties
-
+                GetComponent<Properties>().findCard();
                 break;
         }
         
