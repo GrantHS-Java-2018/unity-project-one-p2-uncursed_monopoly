@@ -51,13 +51,61 @@ public class RollButton : MonoBehaviour
 
     void Buy()
     {
+        if (dice1.GetComponent<Dice>().turn == 1)
+        {
+            
+        }
+        else if (dice1.GetComponent<Dice>().turn == 2)
+        {
+            
+        }
+        else if (dice1.GetComponent<Dice>().turn == 3)
+        {
+     
+        }
         
+    }
+
+    void CheckOwnership()
+    {
+        if (dice1.GetComponent<Dice>().turn == 1)
+        {
+            if (Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+                
+            }
+            else if (Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+                
+            }
+            else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+               
+            }
+            else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false)
+            {
+                Buy();
+            }
+        }
+        else if (dice1.GetComponent<Dice>().turn == 2)
+        {
+            
+        }
+        else if (dice1.GetComponent<Dice>().turn == 3)
+        {
+     
+        }
+    }
+
+    void Payrent()
+    {
     }
 
     void bail()
     {
         
     }
+    
 
     void GOOJF()
     {
