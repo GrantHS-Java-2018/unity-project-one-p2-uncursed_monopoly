@@ -87,7 +87,18 @@ public class RollButton : MonoBehaviour
 
     void Payrent()
     {
-        
+        if (dice1.GetComponent<Dice>().turn == 1)
+        {
+            
+        }
+        else if (dice1.GetComponent<Dice>().turn == 2)
+        {
+            
+        }
+        else if (dice1.GetComponent<Dice>().turn == 3)
+        {
+     
+        }
     }
     
 
