@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public int wallet = 1500;
     private int doublesCounter = 0;
     //public String ownership;
-    public bool[] ownership;
+    public bool [] ownership;
     public GameObject[] propertArray;
     public GameObject properties;
 
