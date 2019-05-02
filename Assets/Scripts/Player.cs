@@ -206,7 +206,7 @@ public class Player : MonoBehaviour
 
                 break;
             default://properties
-                //GetComponent<properties>().findCard();
+                   properties.GetComponent<Properties>().findCard(); 
                 break;
         }
         
