@@ -28,7 +28,7 @@ public class RollButton : MonoBehaviour
     void Start()
     {
         rollButton.onClick.AddListener(TaskOnClick);
-        buyProperties.onClick.AddListener(Buy);
+        buyProperties.onClick.AddListener(CheckOwnership);
         postBail.onClick.AddListener(bail);
         getOut.onClick.AddListener(GOOJF);
         buyHousing.onClick.AddListener(housing);
@@ -53,15 +53,157 @@ public class RollButton : MonoBehaviour
     {
         if (dice1.GetComponent<Dice>().turn == 1)
         {
-            
+            switch (Player1.GetComponent<Player>().waypointIndex)
+            {
+                case 1: case 3:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 60;
+                    break;
+                case 6: case 8:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 100;
+                    break;
+                case 9:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 120;
+                    break;
+                case 11: case 13:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 140;
+                    break;
+                case 14:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 160;
+                    break;
+                case 18: case 16:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 180;
+                    break;
+                case 19:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 200;
+                    break;
+                case 23: case 21:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 220;
+                    break;
+                case 24:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 240;
+                    break;
+                case 27: case 26:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 260;
+                    break;
+                case 29:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 280;
+                    break;
+                case 32: case 31:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 300;
+                    break;
+                case 34:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 320;
+                    break;
+                case 37:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 350;
+                    break;
+                case 39:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 400;
+                    break;
+            }
         }
         else if (dice1.GetComponent<Dice>().turn == 2)
         {
+            switch (Player2.GetComponent<Player>().waypointIndex)
+            {
+                case 1: case 3:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 60;
+                    break;
+                case 6: case 8:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 100;
+                    break;
+                case 9:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 120;
+                    break;
+                case 11: case 13:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 140;
+                    break;
+                case 14:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 160;
+                    break;
+                case 18: case 16:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 180;
+                    break;
+                case 19:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 200;
+                    break;
+                case 23: case 21:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 220;
+                    break;
+                case 24:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 240;
+                    break;
+                case 27: case 26:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 260;
+                    break;
+                case 29:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 280;
+                    break;
+                case 32: case 31:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 300;
+                    break;
+                case 34:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 320;
+                    break;
+                case 37:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 350;
+                    break;
+                case 39:
+                    Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 400;
+                    break;
+            }
             
         }
         else if (dice1.GetComponent<Dice>().turn == 3)
         {
-     
+            switch (Player3.GetComponent<Player>().waypointIndex)
+            {
+                case 1: case 3:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 60;
+                    break;
+                case 6: case 8:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 100;
+                    break;
+                case 9:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 120;
+                    break;
+                case 11: case 13:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 140;
+                    break;
+                case 14:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 160;
+                    break;
+                case 18: case 16:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 180;
+                    break;
+                case 19:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 200;
+                    break;
+                case 23: case 21:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 220;
+                    break;
+                case 24:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 240;
+                    break;
+                case 27: case 26:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 260;
+                    break;
+                case 29:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 280;
+                    break;
+                case 32: case 31:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 300;
+                    break;
+                case 34:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 320;
+                    break;
+                case 37:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 350;
+                    break;
+                case 39:
+                    Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 400;
+                    break;
+            }
         }
         
     }
@@ -99,6 +241,64 @@ public class RollButton : MonoBehaviour
 
     void Payrent()
     {
+        if (dice1.GetComponent<Dice>().turn == 1)
+        {
+            switch (Player1.GetComponent<Player>().waypointIndex)
+            {
+            case 1:
+                break;
+            case 3:
+                break;
+            case 6:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 11:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 16:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 21:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 29:
+                break;
+            case 31:
+                break;
+            case 32:
+                break;
+            case 34:
+                break;
+            case 37:
+                break;
+            case 39:
+                break;
+            }
+        }
+        else if (dice1.GetComponent<Dice>().turn == 2)
+        {
+            
+        }
+        else if (dice1.GetComponent<Dice>().turn == 3)
+        {
+     
+        }
     }
 
     void bail()

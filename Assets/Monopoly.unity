@@ -3930,7 +3930,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollButtonPress: 0
   pressRoll: 0
-  m_YourFirstButton: {fileID: 1609539261}
+  rollButton: {fileID: 0}
+  buyProperties: {fileID: 0}
+  postBail: {fileID: 0}
+  getOut: {fileID: 0}
+  buyHousing: {fileID: 0}
+  mortgageing: {fileID: 0}
+  endTurn: {fileID: 0}
   dice1: {fileID: 1018770731}
   dice2: {fileID: 108618999}
   Player1: {fileID: 1350309460}

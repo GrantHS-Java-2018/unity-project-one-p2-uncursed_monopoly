@@ -97,7 +97,7 @@ public class Properties : MonoBehaviour
             case 37:
                 GetComponent<SpriteRenderer>().sprite = properyCards[20];
                 break;
-            case 38:
+            case 39:
                 GetComponent<SpriteRenderer>().sprite = properyCards[21];
                 break;
         } 
@@ -168,7 +168,7 @@ public class Properties : MonoBehaviour
                 case 37:
                     GetComponent<SpriteRenderer>().sprite = properyCards[20];
                     break;
-                case 38:
+                case 39:
                     GetComponent<SpriteRenderer>().sprite = properyCards[21];
                     break;
             }
@@ -240,7 +240,7 @@ public class Properties : MonoBehaviour
                 case 37:
                     GetComponent<SpriteRenderer>().sprite = properyCards[20];
                     break;
-                case 38:
+                case 39:
                     GetComponent<SpriteRenderer>().sprite = properyCards[21];
                     break;
             }
