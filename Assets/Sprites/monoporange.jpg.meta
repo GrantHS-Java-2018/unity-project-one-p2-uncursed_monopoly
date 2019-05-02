@@ -90,10 +90,10 @@ TextureImporter:
       name: monoporange_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 14
-        width: 130
-        height: 206
+        x: 22
+        y: 26
+        width: 187
+        height: 303
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,7 +101,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff0e051d1bf5de546bdd47d42a9d1c8a
+      spriteID: 90946710890561a4b85b9a877b035631
       vertices: []
       indices: 
       edges: []
@@ -110,10 +110,10 @@ TextureImporter:
       name: monoporange_1
       rect:
         serializedVersion: 2
-        x: 149
-        y: 15
-        width: 133
-        height: 206
+        x: 232
+        y: 27
+        width: 190
+        height: 301
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1899ea19352f5f46a3663e97ca045f1
+      spriteID: c43f565cb6057544d8d0eb99f1ff858f
       vertices: []
       indices: 
       edges: []
@@ -130,10 +130,10 @@ TextureImporter:
       name: monoporange_2
       rect:
         serializedVersion: 2
-        x: 294
-        y: 16
-        width: 131
-        height: 202
+        x: 444
+        y: 24
+        width: 192
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84df74351e9a6974b83b12866cb2a2cc
+      spriteID: c88c75c9b22b25540a73890a0c218656
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 82acb1a8ba84eee4a8ec62574f3578ac
+    spriteID: ee159de5a1ae55e41bc8d802c632021b
     vertices: []
     indices: 
     edges: []

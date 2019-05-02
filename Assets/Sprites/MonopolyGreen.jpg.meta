@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +77,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,18 +90,18 @@ TextureImporter:
       name: MonopolyGreen_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 2
-        width: 141
-        height: 219
+        x: 20
+        y: 19
+        width: 191
+        height: 304
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d11842440f41e4f96cc2ab2cab0771
+      spriteID: 21444f1311984e241b837de6ce4013dd
       vertices: []
       indices: 
       edges: []
@@ -110,18 +110,18 @@ TextureImporter:
       name: MonopolyGreen_1
       rect:
         serializedVersion: 2
-        x: 150
-        y: 9
-        width: 139
-        height: 212
+        x: 232
+        y: 21
+        width: 188
+        height: 305
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b64bc33bdd094849a614dad477e53f3
+      spriteID: ebc5565f5b10caf46b881ab73fdb7ed4
       vertices: []
       indices: 
       edges: []
@@ -130,18 +130,18 @@ TextureImporter:
       name: MonopolyGreen_2
       rect:
         serializedVersion: 2
-        x: 289
-        y: 13
-        width: 135
-        height: 208
+        x: 443
+        y: 24
+        width: 190
+        height: 303
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9945034f15135f34381569f843294a52
+      spriteID: 0bc2ce4a6e7b77e4c88f7aacbd22c26b
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 865523df8b6a02e4181f01469780b27a
+    spriteID: ceb97597ff84169458876f09ff06ad80
     vertices: []
     indices: 
     edges: []
