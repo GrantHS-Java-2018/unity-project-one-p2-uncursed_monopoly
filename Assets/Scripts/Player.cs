@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public int wallet = 1500;
     private int doublesCounter = 0;
     //public String ownership;
-    public bool[] Ownership;
+    public bool[] ownership;
     public GameObject[] propertArray;
     public GameObject properties;
 
@@ -206,7 +206,7 @@ public class Player : MonoBehaviour
 
                 break;
             default://properties
-                //GetComponent<properties>().findCard();
+                   properties.GetComponent<Properties>().findCard(); 
                 break;
         }
         

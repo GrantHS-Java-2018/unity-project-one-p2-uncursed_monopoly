@@ -15,12 +15,14 @@ public class RollButton : MonoBehaviour
     public GameObject Player2;
     public GameObject Player3;
     int doublesCounter = 0;
+    public Button m_YourSecondButton;
     GameObject Button;
     public int totalDice;
     // Start is called before the first frame update
     void Start()
     {
         m_YourFirstButton.onClick.AddListener(TaskOnClick);
+        m_YourSecondButton.onClick.AddListener(Buy);
        // button.onClick.AddListener(Dice, Dice2);
     }
     void TaskOnClick()
@@ -33,6 +35,12 @@ public class RollButton : MonoBehaviour
         totalDice = dice1.GetComponent<Dice>().value + dice2.GetComponent<Dice>().value;
         //Debug.Log("You have clicked the button!");
 
+    }
+
+    void Buy()
+    {
+        
+        
     }
 
     
