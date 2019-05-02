@@ -9,20 +9,32 @@ public class RollButton : MonoBehaviour
     public Boolean rollButtonPress = false;
     public Boolean pressRoll = false;
     private int button;
-    public Button m_YourFirstButton;
+    public Button rollButton;
+    public Button buyProperties;
+    public Button postBail;
+    public Button getOut;
+    public Button buyHousing;
+    public Button mortgageing;
+    public Button endTurn;
     public GameObject dice1, dice2;
     public GameObject Player1;
     public GameObject Player2;
     public GameObject Player3;
     int doublesCounter = 0;
-    public Button m_YourSecondButton;
+   
     GameObject Button;
     public int totalDice;
     // Start is called before the first frame update
     void Start()
     {
-        m_YourFirstButton.onClick.AddListener(TaskOnClick);
-        m_YourSecondButton.onClick.AddListener(Buy);
+        rollButton.onClick.AddListener(TaskOnClick);
+        buyProperties.onClick.AddListener(Buy);
+        postBail.onClick.AddListener(bail);
+        getOut.onClick.AddListener(GOOJF);
+        buyHousing.onClick.AddListener(housing);
+        mortgageing.onClick.AddListener(mortgage);
+        endTurn.onClick.AddListener(end);
+        
        // button.onClick.AddListener(Dice, Dice2);
     }
     void TaskOnClick()
@@ -40,11 +52,33 @@ public class RollButton : MonoBehaviour
     void Buy()
     {
         
+    }
+
+    void bail()
+    {
         
     }
 
-    
+    void GOOJF()
+    {
+        
+    }
 
+    void housing()
+    {
+        
+    }
+
+    void mortgage()
+    {
+        
+    }
+
+    void end()
+    {
+        
+    }
+    
 
     // Update is called once per frame
     void Update()
