@@ -90,10 +90,10 @@ TextureImporter:
       name: 71b9z0LnvdL._SX425__0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 9
-        width: 133
-        height: 211
+        x: 20
+        y: 19
+        width: 189
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,7 +101,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8567905198e75ab4abc0dd0d8a4e3d2f
+      spriteID: bec06de97b8aa7a499e650d6a1429654
       vertices: []
       indices: 
       edges: []
@@ -110,10 +110,10 @@ TextureImporter:
       name: 71b9z0LnvdL._SX425__1
       rect:
         serializedVersion: 2
-        x: 152
-        y: 12
-        width: 129
-        height: 207
+        x: 229
+        y: 21
+        width: 190
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d5823e7212661c4aad3790e2662d888
+      spriteID: 3da2ddc5543c4824a9f3d8e49993b4cb
       vertices: []
       indices: 
       edges: []
@@ -130,18 +130,18 @@ TextureImporter:
       name: 71b9z0LnvdL._SX425__2
       rect:
         serializedVersion: 2
-        x: 293
-        y: 13
-        width: 131
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 441
+        y: 22
+        width: 193
+        height: 305
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48952273}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d024dd03dc1f1fe4a88f0add1df0e1ca
+      spriteID: 7c5580bf94e370c40bb1099a3fee02fd
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: af3173a497a7b024584dc6dc74ce0666
+    spriteID: e3b6cc6bcf4a6d041bbc91fb010fe141
     vertices: []
     indices: 
     edges: []

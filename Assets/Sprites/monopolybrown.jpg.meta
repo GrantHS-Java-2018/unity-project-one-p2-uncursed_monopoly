@@ -89,12 +89,12 @@ TextureImporter:
       name: monopolybrown_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 12
-        width: 220
-        height: 324
+        x: 25
+        y: 27
+        width: 182
+        height: 295
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -109,12 +109,12 @@ TextureImporter:
       name: monopolybrown_1
       rect:
         serializedVersion: 2
-        x: 227
-        y: 23
-        width: 192
-        height: 313
+        x: 233
+        y: 25
+        width: 184
+        height: 298
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
