@@ -29,13 +29,14 @@ public class RollButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         rollButton.onClick.AddListener(TaskOnClick);
         buyProperties.onClick.AddListener(CheckOwnership);
         //postBail.onClick.AddListener(bail);
         //getOut.onClick.AddListener(GOOJF);
         //buyHousing.onClick.AddListener(housing);
         //mortgageing.onClick.AddListener(mortgage);
-        //endTurn.onClick.AddListener(end);
+        endTurn.onClick.AddListener(dice1.GetComponent<Dice>().endTurn);
         getOutChance.onClick.AddListener(GOOJF);
         getOutCC.onClick.AddListener(GOOJF);
         postBail.onClick.AddListener(bail);
@@ -495,6 +496,25 @@ public class RollButton : MonoBehaviour
     {
         
     }
+
+    /*
+    void endTurnButton()
+    {
+        rollButton.enabled = true;
+        if (dice1.GetComponent<Dice>().turn == 1)
+        {
+            dice1.GetComponent<Dice>().turn++;
+        }
+        else if (dice1.GetComponent<Dice>().turn == 2)
+        {
+            dice1.GetComponent<Dice>().turn++;
+        }
+        else if (dice1.GetComponent<Dice>().turn == 3)
+        {
+            dice1.GetComponent<Dice>().turn = 1;
+        }
+    }
+    */
     
     
     

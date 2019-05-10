@@ -89,10 +89,11 @@ public class Player : MonoBehaviour
             if (inJail == true)
             {
                 WaypointJail();
+                /*
                 chanceGOOFJButton.SetActive(false);
                 ccGOOFJButton.SetActive(false);
                 bail.SetActive(false);
-                
+                */
             }
             else
             {
@@ -179,6 +180,7 @@ public class Player : MonoBehaviour
                     transform.position = new Vector3(jailWaypoint.transform.position.x,
                         jailWaypoint.transform.position.y, 0);
                     inJail = true;
+                    Button.SetActive(false);
                     //Button.SetActive(false); 
                     return false;
                 }
@@ -199,6 +201,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            Button.SetActive(false);
             return false;
             //Button.SetActive(false); 
         }
