@@ -21,18 +21,25 @@ public class Player : MonoBehaviour
     public int waypointIndex;
     public int stopRolling = 1;
     public int wallet = 1500;
-    private int doublesCounter = 0;
+    public int doublesCounter = 0;
     //public String ownership;
     public bool [] ownership;
     public GameObject[] propertArray;
     public GameObject properties;
 
+    public GameObject chanceGOOFJButton;
+    public GameObject ccGOOFJButton;
+    public GameObject bail;
 
     // placeholders / future //
 
     public String tileType;
     public int rentvalue;
-
+    public bool inJail = false;
+    public int jailCounter = 0;
+    public bool chanceGOOFJ = false;
+    public bool ccGOOFJ = false; 
+    
     void actions()
     {
     }
@@ -57,6 +64,11 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        chanceGOOFJButton.SetActive(false);
+        ccGOOFJButton.SetActive(false);
+        bail.SetActive(false);
+
+        
 
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
             waypointArray[waypointIndex].transform.position.y, 0);
@@ -74,28 +86,40 @@ public class Player : MonoBehaviour
         //Doubles();
         if (stopRolling == 1)
         {
-            Debug.Log("movement");
-            for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
+            if (inJail == true)
             {
-                if (waypointIndex == 39)
-                {
-                    transform.position = new Vector3(waypointArray[0].transform.position.x,
-                        waypointArray[0].transform.position.y, 0);
-                    waypointIndex = 0;
-                }
-                else
-                {
-                    transform.position = new Vector3(waypointArray[waypointIndex + 1].transform.position.x,
-                        waypointArray[waypointIndex + 1].transform.position.y, 0);
-                    waypointIndex++;
-                }
-
-                if (waypointIndex == 0)
-                {
-                    wallet = wallet + 200;
-                }
-
+                WaypointJail();
+                chanceGOOFJButton.SetActive(false);
+                ccGOOFJButton.SetActive(false);
+                bail.SetActive(false);
+                
             }
+            else
+            {
+              Debug.Log("movement");
+                    for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
+                    {
+                        if (waypointIndex == 39)
+                        {
+                            transform.position = new Vector3(waypointArray[0].transform.position.x,
+                                waypointArray[0].transform.position.y, 0);
+                            waypointIndex = 0;
+                        }
+                        else
+                        {
+                            transform.position = new Vector3(waypointArray[waypointIndex + 1].transform.position.x,
+                                waypointArray[waypointIndex + 1].transform.position.y, 0);
+                            waypointIndex++;
+                        }
+        
+                        if (waypointIndex == 0)
+                        {
+                            wallet = wallet + 200;
+                        }
+        
+                    }
+            }
+      
 
   
             stopRolling = 2;
@@ -153,7 +177,8 @@ public class Player : MonoBehaviour
                 if (doublesCounter == 3)
                 {
                     transform.position = new Vector3(jailWaypoint.transform.position.x,
-                        waypointArray[waypointIndex + 1].transform.position.y, 0);
+                        jailWaypoint.transform.position.y, 0);
+                    inJail = true;
                     //Button.SetActive(false); 
                     return false;
                 }
@@ -203,7 +228,9 @@ public class Player : MonoBehaviour
 
                 break;
             case 30://jail
-
+                transform.position = new Vector3(jailWaypoint.transform.position.x,
+                    jailWaypoint.transform.position.y, 0);
+                inJail = true;
                 break;
             default://properties
                    properties.GetComponent<Properties>().findCard(); 
@@ -212,6 +239,62 @@ public class Player : MonoBehaviour
         
         
         
+    }
+
+    void WaypointJail()
+    {
+        if (jailCounter == 3)
+        {
+            if (dice1.GetComponent<Dice>().turn == 1)
+            {
+                GetComponent<Player>().wallet = GetComponent<Player>().wallet - 50;
+            }
+            else if (dice1.GetComponent<Dice>().turn == 2)
+            {
+                GetComponent<Player>().wallet = GetComponent<Player>().wallet - 50;
+
+            }
+            else if (dice1.GetComponent<Dice>().turn == 3)
+            {
+                GetComponent<Player>().wallet = GetComponent<Player>().wallet - 50;
+
+            }
+
+            jailCounter = 0;
+            inJail = false;
+            followWaypoints();
+        }
+        else
+        {
+            if (chanceGOOFJ == true && ccGOOFJ == true)
+            {
+                chanceGOOFJButton.SetActive(true);
+            }
+            else if (chanceGOOFJ == true)
+            {
+                chanceGOOFJButton.SetActive(true);
+
+            }
+            else if (ccGOOFJ == true)
+            {
+                ccGOOFJButton.SetActive(true);
+            }
+            else
+            {
+                ccGOOFJButton.SetActive(false);
+                chanceGOOFJButton.SetActive(false);
+            }
+            bail.SetActive(true);
+            jailCounter++;
+        }
+    }
+
+    public void MovementFromJail()
+    {
+        waypointIndex = 10;
+        transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
+            waypointArray[waypointIndex].transform.position.y, 0);
+        followWaypoints();
     }
 
 

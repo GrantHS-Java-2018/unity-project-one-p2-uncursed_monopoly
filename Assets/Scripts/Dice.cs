@@ -53,15 +53,21 @@ public class Dice : MonoBehaviour
             Debug.Log("turn 1 roll end");
             if (Player1.GetComponent<Player>().Doubles())
             {
-                
+                if (Player1.GetComponent<Player>().inJail == true)
+                {
+                    Player1.GetComponent<Player>().inJail = false;
+                    turn++;
+                }
             }
             else
             {
                 turn++;
+                Player1.GetComponent<Player>().doublesCounter = 0;
             }
-               
-        
-    }
+            
+
+
+        }
         else if (turn == 2)
         {
             Player2.GetComponent<Player>().followWaypoints();
@@ -70,11 +76,16 @@ public class Dice : MonoBehaviour
             Debug.Log("turn 2 roll end");
             if (Player2.GetComponent<Player>().Doubles())
             {
-                
+                if (Player2.GetComponent<Player>().inJail == true)
+                {
+                    Player2.GetComponent<Player>().inJail = false;
+                    turn++;
+                }
             }
             else
             {
                 turn++;
+                Player2.GetComponent<Player>().doublesCounter = 0;
             }
            
         }
@@ -86,12 +97,18 @@ public class Dice : MonoBehaviour
             Debug.Log("turn 3 roll end");
             if (Player3.GetComponent<Player>().Doubles())
             {
-                
+                if (Player3.GetComponent<Player>().inJail == true)
+                {
+                    Player3.GetComponent<Player>().inJail = false;
+                    turn = 1;
+                }
             }
             else
             {
                 turn = 1;
+                Player3.GetComponent<Player>().doublesCounter = 0;
             }
+           
         }
         Button.SetActive(true);
 

@@ -12,7 +12,8 @@ public class RollButton : MonoBehaviour
     public Button rollButton;
     public Button buyProperties;
     public Button postBail;
-    public Button getOut;
+    public Button getOutChance;
+    public Button getOutCC;
     public Button buyHousing;
     public Button mortgageing;
     public Button endTurn;
@@ -21,6 +22,7 @@ public class RollButton : MonoBehaviour
     public GameObject Player2;
     public GameObject Player3;
     int doublesCounter = 0;
+    public GameObject propertyClass;
    
     GameObject Button;
     public int totalDice;
@@ -29,11 +31,14 @@ public class RollButton : MonoBehaviour
     {
         rollButton.onClick.AddListener(TaskOnClick);
         buyProperties.onClick.AddListener(CheckOwnership);
+        //postBail.onClick.AddListener(bail);
+        //getOut.onClick.AddListener(GOOJF);
+        //buyHousing.onClick.AddListener(housing);
+        //mortgageing.onClick.AddListener(mortgage);
+        //endTurn.onClick.AddListener(end);
+        getOutChance.onClick.AddListener(GOOJF);
+        getOutCC.onClick.AddListener(GOOJF);
         postBail.onClick.AddListener(bail);
-        getOut.onClick.AddListener(GOOJF);
-        buyHousing.onClick.AddListener(housing);
-        mortgageing.onClick.AddListener(mortgage);
-        endTurn.onClick.AddListener(end);
         
        // button.onClick.AddListener(Dice, Dice2);
     }
@@ -42,17 +47,86 @@ public class RollButton : MonoBehaviour
         totalDice = 0;
         rollButtonPress = true;
         //Output this to console when Button1 or Button3 is clicked
+        /*
+        if (Player1.GetComponent<Player>().inJail == true && dice1.GetComponent<Dice>().turn == 1)
+        {
+            
+        }
+        else if (Player2.GetComponent<Player>().inJail == true && dice1.GetComponent<Dice>().turn == 2)
+        {
+            
+        }
+        else if (Player3.GetComponent<Player>().inJail == true && dice1.GetComponent<Dice>().turn == 3)
+        {
+            
+        }
+        */
+        
         StartCoroutine(dice1.GetComponent<Dice>().Roll());
         StartCoroutine(dice2.GetComponent<Dice>().Roll());
         totalDice = dice1.GetComponent<Dice>().value + dice2.GetComponent<Dice>().value;
         //Debug.Log("You have clicked the button!");
 
     }
+    
 
     void Buy()
     {
         if (dice1.GetComponent<Dice>().turn == 1)
         {
+            switch (Player1.GetComponent<Player>().waypointIndex)
+            {
+                case 1:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 60;
+                    Player1.GetComponent<Player>().ownership[0] = true;
+                    break;
+                case 3:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 60;
+                    Player1.GetComponent<Player>().ownership[1] = true;
+                    break;
+                case 6:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 100;
+                    break;
+                case 8:
+                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 100;
+                    break;
+                case 9:
+                    break;
+                case 11:
+                    break;
+                case 13:
+                    break;
+                case 14:
+                    break;
+                case 16:
+                    break;
+                case 18:
+                    break;
+                case 19:
+                    break;
+                case 21:
+                    break;
+                case 23:
+                    break;
+                case 24:
+                    break;
+                case 26:
+                    break;
+                case 27:
+                    break;
+                case 29:
+                    break;
+                case 31:
+                    break;
+                case 32:
+                    break;
+                case 34:
+                    break;
+                case 37:
+                    break;
+                case 39:
+                    break;
+            }
             switch (Player1.GetComponent<Player>().waypointIndex)
             {
                 case 1: case 3:
@@ -231,11 +305,41 @@ public class RollButton : MonoBehaviour
         }
         else if (dice1.GetComponent<Dice>().turn == 2)
         {
-            
+            if (Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+                
+            }
+            else if (Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+                
+            }
+            else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+               
+            }
+            else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false)
+            {
+                Buy();
+            }
         }
         else if (dice1.GetComponent<Dice>().turn == 3)
         {
-     
+            if (Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+                
+            }
+            else if (Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+                
+            }
+            else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == true)
+            {
+               
+            }
+            else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false)
+            {
+                Buy();
+            }
         }
     }
 
@@ -306,22 +410,75 @@ public class RollButton : MonoBehaviour
         
         if (dice1.GetComponent<Dice>().turn == 1)
         {
-            
+            Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 50;
+            Player1.GetComponent<Player>().MovementFromJail();
         }
         else if (dice1.GetComponent<Dice>().turn == 2)
         {
-            
+            Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 50;
+            Player2.GetComponent<Player>().MovementFromJail();
+
         }
         else if (dice1.GetComponent<Dice>().turn == 3)
         {
-     
+            Player3.GetComponent<Player>().wallet = Player3.GetComponent<Player>().wallet - 50;
+            Player3.GetComponent<Player>().MovementFromJail();
+
+
         }
+        
     }
     
 
     void GOOJF()
     {
-        
+        if (dice1.GetComponent<Dice>().turn == 1)
+        {
+            if (Player1.GetComponent<Player>().ccGOOFJ == true)
+            {
+                Player1.GetComponent<Player>().inJail = false;
+                Player1.GetComponent<Player>().ccGOOFJ = false;
+            }
+            else if (Player1.GetComponent<Player>().chanceGOOFJ == true)
+            {
+                Player1.GetComponent<Player>().inJail = false;
+                Player1.GetComponent<Player>().chanceGOOFJ = false;
+            }
+            Player1.GetComponent<Player>().MovementFromJail();
+
+        }
+        else if (dice1.GetComponent<Dice>().turn == 2)
+        {
+            if (Player2.GetComponent<Player>().ccGOOFJ == true)
+            {
+                Player2.GetComponent<Player>().inJail = false;
+                Player2.GetComponent<Player>().ccGOOFJ = false;
+            }
+            else if (Player2.GetComponent<Player>().chanceGOOFJ == true)
+            {
+                Player2.GetComponent<Player>().inJail = false;
+                Player2.GetComponent<Player>().chanceGOOFJ = false;
+            }
+            Player2.GetComponent<Player>().MovementFromJail();
+
+            
+        }
+        else if (dice1.GetComponent<Dice>().turn == 3)
+        {
+            if (Player3.GetComponent<Player>().ccGOOFJ == true)
+            {
+                Player3.GetComponent<Player>().inJail = false;
+                Player3.GetComponent<Player>().ccGOOFJ = false;
+            }
+            else if (Player3.GetComponent<Player>().chanceGOOFJ == true)
+            {
+                Player3.GetComponent<Player>().inJail = false;
+                Player3.GetComponent<Player>().chanceGOOFJ = false;
+            }
+            Player3.GetComponent<Player>().MovementFromJail();
+
+     
+        }
     }
 
     void housing()
@@ -338,6 +495,8 @@ public class RollButton : MonoBehaviour
     {
         
     }
+    
+    
     
 
     // Update is called once per frame

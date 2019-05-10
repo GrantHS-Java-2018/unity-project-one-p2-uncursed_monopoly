@@ -10,7 +10,7 @@ public class Properties : MonoBehaviour
     public GameObject Player2;
     public GameObject Player3;
     public GameObject dice1, dice2;
-    [SerializeField]private Sprite[] properyCards;
+    [SerializeField]public Sprite[] properyCards;
     
     
     // Start is called before the first frame update
