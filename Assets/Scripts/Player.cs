@@ -88,6 +88,7 @@ public class Player : MonoBehaviour
         {
             if (inJail == true)
             {
+                Debug.Log("inJail");
                 WaypointJail();
                 /*
                 chanceGOOFJButton.SetActive(false);
@@ -131,7 +132,7 @@ public class Player : MonoBehaviour
                 GetComponent<Dice>().turn++;
             }
             */
-            Button.SetActive(true);
+            //Button.SetActive(true);
             /*
             if (GetComponent<Dice>().turn == 1)
             {
@@ -182,6 +183,7 @@ public class Player : MonoBehaviour
                     inJail = true;
                     Button.SetActive(false);
                     //Button.SetActive(false); 
+                    doublesCounter = 0;
                     return false;
                 }
                 else
@@ -201,6 +203,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            doublesCounter = 0;
             Button.SetActive(false);
             return false;
             //Button.SetActive(false); 

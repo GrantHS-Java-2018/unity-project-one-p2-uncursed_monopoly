@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.NetworkSystem;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -15,11 +16,13 @@ public class Dice : MonoBehaviour
     public GameObject Player3;
     public int turn = 1;
     public GameObject Button;
-
+    
     public GameObject bail;
 
     public GameObject ccGOOFJ;
     public GameObject chanceGOOFJ;
+    public GameObject endTurnButton;
+    public List<GameObject> playerList;
     // Start is called before the first frame update
     void Awake ()
     {
@@ -27,6 +30,7 @@ public class Dice : MonoBehaviour
     }
     void Start()
     {
+        playerList = new List<GameObject>{Player1, Player2, Player3};
     }
 
     // Update is called once per frame
@@ -50,118 +54,93 @@ public class Dice : MonoBehaviour
         }
         
         //StartCoroutine(Player1.GetComponent<Player>().followWaypoints());
-        if (turn == 1)
-        {
-            Player1.GetComponent<Player>().followWaypoints();
-            Debug.Log("turn 1 roll");
-            //Player1.GetComponent<Player>().Doubles();
-            Debug.Log("turn 1 roll end");
-            if (Player1.GetComponent<Player>().Doubles())
-            {
-                if (Player1.GetComponent<Player>().inJail == true)
-                {
-                    Player1.GetComponent<Player>().inJail = false;
-                    //turn++;
-                    Button.SetActive(false);
-                }
-            }
-            else
-            {
-                //turn++;
-                Player1.GetComponent<Player>().doublesCounter = 0;
-                Button.SetActive(false);
-            }
-            
-
-
-        }
-        else if (turn == 2)
-        {
-            Player2.GetComponent<Player>().followWaypoints();
-            Debug.Log("turn 2 roll");
-            //Player2.GetComponent<Player>().Doubles();
-            Debug.Log("turn 2 roll end");
-            if (Player2.GetComponent<Player>().Doubles())
-            {
-                if (Player2.GetComponent<Player>().inJail == true)
-                {
-                    Player2.GetComponent<Player>().inJail = false;
-                    //turn++;
-                    Button.SetActive(false);
-                }
-            }
-            else
-            {
-                //turn++;
-                Player2.GetComponent<Player>().doublesCounter = 0;
-                Button.SetActive(false);
-            }
-           
-        }
-        else if (turn == 3)
-        {
-            Player3.GetComponent<Player>().followWaypoints();
-            Debug.Log("turn 3 roll");
-            //Player3.GetComponent<Player>().Doubles();
-            Debug.Log("turn 3 roll end");
-            if (Player3.GetComponent<Player>().Doubles())
-            {
-                if (Player3.GetComponent<Player>().inJail == true)
-                {
-                    Player3.GetComponent<Player>().inJail = false;
-                    //turn = 1;
-                    Button.SetActive(false);
-                }
-            }
-            else
-            {
-                //turn = 1;
-                Player3.GetComponent<Player>().doublesCounter = 0;
-                Button.SetActive(false);
-            }
-           
-        }
+     
+        MovePlayer(turn);
         //Button.SetActive(true);
 
         
     }
 
+    private void MovePlayer(int player)
+    {
+        playerList[player - 1].GetComponent<Player>().followWaypoints();
+        Debug.Log("turn 3 roll");
+        //Player3.GetComponent<Player>().Doubles();
+        Debug.Log("turn 3 roll end");
+        if (playerList[player - 1].GetComponent<Player>().Doubles())
+        {
+            Debug.Log("doubles are present");
+
+            if (playerList[player - 1].GetComponent<Player>().inJail == true)
+            {
+                playerList[player - 1].GetComponent<Player>().inJail = false;
+                //turn = 1;
+                Button.SetActive(false);
+            }
+        }
+        else
+        {
+            Debug.Log("no Doubles");
+            //turn = 1;
+            playerList[player - 1].GetComponent<Player>().doublesCounter = 0;
+            Button.SetActive(false);
+            endTurnButton.SetActive(true);
+            
+        }
+    }
+
+    private void IncrimentTurn()
+    {
+        
+    }
+
     public void endTurn()
     {
+        Debug.Log("endturnActivated");
+        
+        
+        
+        
         Button.SetActive(true);
         if (turn == 1)
         {
+            Player1.GetComponent<Player>().stopRolling = 1;
             turn++;
             
+            if (turn == 2 && Player2.GetComponent<Player>().inJail == true)
+                {
+                    ccGOOFJ.SetActive(true);
+                    chanceGOOFJ.SetActive(true);
+                    bail.SetActive(true);
+                }
         }
         else if (turn == 2)
         {
+            Player2.GetComponent<Player>().stopRolling = 1;
             turn++;
+              if (turn == 3 && Player3.GetComponent<Player>().inJail == true)
+                {
+                    ccGOOFJ.SetActive(true);
+                    chanceGOOFJ.SetActive(true);
+                    bail.SetActive(true);
+                }
         }
         else if (turn == 3)
         {
+            Debug.Log("turn 1 switched");
+            Player3.GetComponent<Player>().stopRolling = 1;
             turn = 1;
+            if (turn == 1 && Player1.GetComponent<Player>().inJail == true)
+            {
+                ccGOOFJ.SetActive(true);
+                chanceGOOFJ.SetActive(true);
+                bail.SetActive(true);
+            }
         }
-        
-        if (turn == 1 && Player1.GetComponent<Player>().inJail == true)
-        {
-            ccGOOFJ.SetActive(true);
-            chanceGOOFJ.SetActive(true);
-            bail.SetActive(true);
-        }
-        else if (turn == 2 && Player2.GetComponent<Player>().inJail == true)
-        {
-            ccGOOFJ.SetActive(true);
-            chanceGOOFJ.SetActive(true);
-            bail.SetActive(true);
-        }
-        else if (turn == 3 && Player3.GetComponent<Player>().inJail == true)
-        {
-            ccGOOFJ.SetActive(true);
-            chanceGOOFJ.SetActive(true);
-            bail.SetActive(true);
-        }
-        
+    
+        Debug.Log("endturnEnded");
+        endTurnButton.SetActive(false);
+   
         
     }
 }

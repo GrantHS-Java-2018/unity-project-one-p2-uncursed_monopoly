@@ -45,6 +45,7 @@ public class RollButton : MonoBehaviour
     }
     void TaskOnClick()
     {
+        
         totalDice = 0;
         rollButtonPress = true;
         //Output this to console when Button1 or Button3 is clicked
@@ -61,12 +62,13 @@ public class RollButton : MonoBehaviour
         {
             
         }
-        */
         
+        */
         StartCoroutine(dice1.GetComponent<Dice>().Roll());
         StartCoroutine(dice2.GetComponent<Dice>().Roll());
         totalDice = dice1.GetComponent<Dice>().value + dice2.GetComponent<Dice>().value;
-        //Debug.Log("You have clicked the button!");
+  
+        
 
     }
     
