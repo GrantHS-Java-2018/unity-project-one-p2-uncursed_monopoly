@@ -23,6 +23,7 @@ public class RollButton : MonoBehaviour
     public GameObject Player3;
     int doublesCounter = 0;
     public GameObject propertyClass;
+    
    
     GameObject Button;
     public int totalDice;
@@ -64,6 +65,7 @@ public class RollButton : MonoBehaviour
         }
         
         */
+        
         StartCoroutine(dice1.GetComponent<Dice>().Roll());
         StartCoroutine(dice2.GetComponent<Dice>().Roll());
         totalDice = dice1.GetComponent<Dice>().value + dice2.GetComponent<Dice>().value;

@@ -69,6 +69,7 @@ public class Dice : MonoBehaviour
         Debug.Log("turn 3 roll end");
         if (playerList[player - 1].GetComponent<Player>().Doubles())
         {
+            Button.SetActive(true);
             Debug.Log("doubles are present");
 
             if (playerList[player - 1].GetComponent<Player>().inJail == true)
@@ -77,6 +78,8 @@ public class Dice : MonoBehaviour
                 //turn = 1;
                 Button.SetActive(false);
             }
+
+            playerList[player - 1].GetComponent<Player>().stopRolling = 1;
         }
         else
         {
@@ -88,7 +91,6 @@ public class Dice : MonoBehaviour
             
         }
     }
-
     private void IncrimentTurn()
     {
         
