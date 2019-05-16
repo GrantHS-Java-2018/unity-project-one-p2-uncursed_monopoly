@@ -12,7 +12,6 @@ public class Properties : MonoBehaviour
     public GameObject dice1, dice2;
     [SerializeField]public Sprite[] properyCards;
     
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -248,7 +247,12 @@ public class Properties : MonoBehaviour
         
         
     }
-    
+
+    public void CheckOwnership()
+    {
+        
+        
+    }
     
     
     

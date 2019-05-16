@@ -293,10 +293,14 @@ public class Player : MonoBehaviour
             bail.SetActive(true);
             jailCounter++;
         }
+        
     }
 
     public void MovementFromJail()
     {
+        ccGOOFJButton.SetActive(false);
+        chanceGOOFJButton.SetActive(false);
+        bail.SetActive(false);
         waypointIndex = 10;
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
             waypointArray[waypointIndex].transform.position.y, 0);
