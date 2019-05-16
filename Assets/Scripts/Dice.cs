@@ -45,12 +45,12 @@ public class Dice : MonoBehaviour
 
     public IEnumerator Roll()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 10; i++)
         {
             int num = Random.Range(0, 6) + 1;
             GetComponent<SpriteRenderer>().sprite = dieFace[num - 1];
             value = num;
-            yield return new WaitForSeconds(.15f);
+            yield return new WaitForSeconds(.10f);
         }
         
         //StartCoroutine(Player1.GetComponent<Player>().followWaypoints());

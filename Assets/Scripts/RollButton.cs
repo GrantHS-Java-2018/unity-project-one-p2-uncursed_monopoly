@@ -14,9 +14,11 @@ public class RollButton : MonoBehaviour
     public Button postBail;
     public Button getOutChance;
     public Button getOutCC;
-    public Button buyHousing;
+    //public Button buyHousing;
     public Button mortgageing;
     public Button endTurn;
+    public Button doNotBuyProperty;
+    public Button payRent;
     public GameObject dice1, dice2;
     public GameObject Player1;
     public GameObject Player2;
@@ -134,6 +136,7 @@ public class RollButton : MonoBehaviour
             }
             switch (Player1.GetComponent<Player>().waypointIndex)
             {
+                
                 case 1: case 3:
                     Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 60;
                     break;
