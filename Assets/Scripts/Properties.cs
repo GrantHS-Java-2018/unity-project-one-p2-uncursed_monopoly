@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
@@ -250,7 +251,10 @@ public class Properties : MonoBehaviour
 
     public void CheckOwnership()
     {
-        
+        if (dice1.GetComponent<Dice>().turn == 1)
+        {
+               
+        }
         
     }
     

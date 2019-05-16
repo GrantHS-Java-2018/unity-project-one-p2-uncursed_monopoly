@@ -298,6 +298,7 @@ public class Player : MonoBehaviour
 
     public void MovementFromJail()
     {
+        inJail = false;
         ccGOOFJButton.SetActive(false);
         chanceGOOFJButton.SetActive(false);
         bail.SetActive(false);
