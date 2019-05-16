@@ -305,7 +305,7 @@ public class Player : MonoBehaviour
         waypointIndex = 10;
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
             waypointArray[waypointIndex].transform.position.y, 0);
-        followWaypoints();
+        //followWaypoints();
     }
 
 
