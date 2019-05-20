@@ -39,13 +39,21 @@ public class RollButton : MonoBehaviour
         //getOut.onClick.AddListener(GOOJF);
         //buyHousing.onClick.AddListener(housing);
         //mortgageing.onClick.AddListener(mortgage);
-        endTurn.onClick.AddListener(dice1.GetComponent<Dice>().endTurn);
+        endTurn.onClick.AddListener(endTurnStarter);
         getOutChance.onClick.AddListener(GOOJF);
         getOutCC.onClick.AddListener(GOOJF);
         postBail.onClick.AddListener(bail);
         
        // button.onClick.AddListener(Dice, Dice2);
     }
+
+    void endTurnStarter()
+    {
+        dice1.GetComponent<Dice>().endTurn();
+        dice2.GetComponent<Dice>().turn = dice1.GetComponent<Dice>().turn;
+
+    }
+    
     void TaskOnClick()
     {
         
