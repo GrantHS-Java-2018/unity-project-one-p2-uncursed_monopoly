@@ -50,6 +50,7 @@ public class RollButton : MonoBehaviour
     void endTurnStarter()
     {
         dice1.GetComponent<Dice>().endTurn();
+        
         dice2.GetComponent<Dice>().turn = dice1.GetComponent<Dice>().turn;
 
     }
@@ -58,29 +59,14 @@ public class RollButton : MonoBehaviour
     {
         
         totalDice = 0;
+        
         rollButtonPress = true;
-        //Output this to console when Button1 or Button3 is clicked
-        /*
-        if (Player1.GetComponent<Player>().inJail == true && dice1.GetComponent<Dice>().turn == 1)
-        {
-            
-        }
-        else if (Player2.GetComponent<Player>().inJail == true && dice1.GetComponent<Dice>().turn == 2)
-        {
-            
-        }
-        else if (Player3.GetComponent<Player>().inJail == true && dice1.GetComponent<Dice>().turn == 3)
-        {
-            
-        }
-        
-        */
-        
+              
         StartCoroutine(dice1.GetComponent<Dice>().Roll());
-        StartCoroutine(dice2.GetComponent<Dice>().Roll());
-        totalDice = dice1.GetComponent<Dice>().value + dice2.GetComponent<Dice>().value;
-  
         
+        StartCoroutine(dice2.GetComponent<Dice>().Roll());
+        
+        totalDice = dice1.GetComponent<Dice>().value + dice2.GetComponent<Dice>().value;       
 
     }
     

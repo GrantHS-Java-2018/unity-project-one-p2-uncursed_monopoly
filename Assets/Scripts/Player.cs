@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     public bool chanceGOOFJ = false;
     public bool ccGOOFJ = false; 
     
-   
+    
   
 
 
