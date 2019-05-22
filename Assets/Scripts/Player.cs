@@ -33,6 +33,10 @@ public class Player : MonoBehaviour
 
     // placeholders / future //
 
+    //public String[] chance = new String[]{"Ilinois", "Boardwalk", "Go", "GOOJF", "Back 3", "Marxism", "$50 1", "$50 2", "property tax", "gain $150", "St. Charles", "pay $15", "Go2Jail"};
+   // public String[] chest = new String[]{"get 25", "lose 50", "get 10", "GOOJF", "get 20", "get 100", "capitlism", "get 200", "property tax", "Go", "loose 100", "pay $150", "Go2Jail", "get 45", "get 100"};
+
+    
     public String tileType;
     public int rentvalue;
     public bool inJail = false;
@@ -40,21 +44,10 @@ public class Player : MonoBehaviour
     public bool chanceGOOFJ = false;
     public bool ccGOOFJ = false; 
     
-    void actions()
-    {
-    }
-
-    void ownerCheck()
-    {
-    }
+   
+  
 
 
-
-    void CCorChance()
-    {
-    }
-
-    // end of placeholdes // 
 
     void payrent()
     {
@@ -307,6 +300,13 @@ public class Player : MonoBehaviour
             waypointArray[waypointIndex].transform.position.y, 0);
         //followWaypoints();
     }
+
+    public void communityChance()
+    {
+        
+    }
+
+
 
 
 

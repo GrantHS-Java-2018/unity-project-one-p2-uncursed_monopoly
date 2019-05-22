@@ -100,8 +100,7 @@ public class Dice : MonoBehaviour
     {
         Debug.Log("endturnActivated");
         
-        
-        
+                
         
         Button.SetActive(true);
         if (turn == 1)
