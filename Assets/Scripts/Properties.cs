@@ -14,17 +14,6 @@ public class Properties : MonoBehaviour
     [SerializeField]public Sprite[] properyCards;
     
     // Start is called before the first frame update
-    void Start()
-    {
-        //Card.SetActive (false);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void findCard()
     {
@@ -102,6 +91,7 @@ public class Properties : MonoBehaviour
                 break;
         } 
         }
+        
         else if(dice1.GetComponent<Dice>().turn == 2){
             switch (Player2.GetComponent<Player>().waypointIndex)
             {
@@ -173,6 +163,7 @@ public class Properties : MonoBehaviour
                     break;
             }
         }
+        
         else if (dice1.GetComponent<Dice>().turn == 3)
         {
             switch (Player3.GetComponent<Player>().waypointIndex)
@@ -246,11 +237,5 @@ public class Properties : MonoBehaviour
             }
         }
         
-        
-    }
-
-
-    
-    
-    
+    } 
 }
