@@ -63,7 +63,6 @@ public class Dice : MonoBehaviour
 
     private void MovePlayer(int player)
     {
-        playerList[player - 1].GetComponent<Player>().followWaypoints();
         Debug.Log("turn 3 roll");
         //Player3.GetComponent<Player>().Doubles();
         Debug.Log("turn 3 roll end");
@@ -90,6 +89,8 @@ public class Dice : MonoBehaviour
             endTurnButton.SetActive(true);
             
         }
+        playerList[player - 1].GetComponent<Player>().followWaypoints();
+
     }
     private void IncrimentTurn()
     {
