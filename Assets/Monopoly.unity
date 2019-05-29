@@ -4792,6 +4792,7 @@ MonoBehaviour:
   Player2: {fileID: 1844866514}
   Player3: {fileID: 160705358}
   propertyClass: {fileID: 1496602457}
+  Ownership: {fileID: 7011051}
   totalDice: 0
 --- !u!1 &1624245676 stripped
 GameObject:

@@ -25,8 +25,16 @@ public class RollButton : MonoBehaviour
     public GameObject Player3;
     int doublesCounter = 0;
     public GameObject propertyClass;
+    public GameObject Ownership;
+    private bool BrownCollection = false;
+    private bool LightBlueCollection = false;
+    private bool PinkCollection = false;
+    private bool OrangeCollection = false;
+    private bool RedCollection = false;
+    private bool YellowCollection = false;
+    private bool GreenCollection = false;
+    private bool DarkBlueCollection = false;
     
-   
     GameObject Button;
     public int totalDice;
     // Start is called before the first frame update
@@ -302,7 +310,7 @@ public class RollButton : MonoBehaviour
             }
             else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false)
             {
-                Buy();
+               // Buy();
             }
         }
         else if (dice1.GetComponent<Dice>().turn == 2)
@@ -321,7 +329,7 @@ public class RollButton : MonoBehaviour
             }
             else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false)
             {
-                Buy();
+              //  Buy();
             }
         }
         else if (dice1.GetComponent<Dice>().turn == 3)
@@ -340,7 +348,7 @@ public class RollButton : MonoBehaviour
             }
             else if (Player1.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player2.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false && Player3.GetComponent<Player>().ownership[Player1.GetComponent<Player>().waypointIndex] == false)
             {
-                Buy();
+               // Buy();
             }
         }
     }
@@ -349,53 +357,117 @@ public class RollButton : MonoBehaviour
     {
         if (dice1.GetComponent<Dice>().turn == 1)
         {
-            switch (Player1.GetComponent<Player>().waypointIndex)
+
+            if (Ownership.GetComponent<Ownership>()
+                    .playerOwnership[propertyClass.GetComponent<Properties>().properyTracker] == 2)
             {
-            case 1:
-                break;
-            case 3:
-                break;
-            case 6:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 11:
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
-            case 16:
-                break;
-            case 18:
-                break;
-            case 19:
-                break;
-            case 21:
-                break;
-            case 23:
-                break;
-            case 24:
-                break;
-            case 26:
-                break;
-            case 27:
-                break;
-            case 29:
-                break;
-            case 31:
-                break;
-            case 32:
-                break;
-            case 34:
-                break;
-            case 37:
-                break;
-            case 39:
-                break;
+                switch (Player1.GetComponent<Player>().waypointIndex)
+                    {
+                    case 1:
+                        if (BrownCollection == true)
+                        {
+                            Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 4;
+                        }
+                        else
+                        {
+                            Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 2;
+                        }
+                        break;
+                    case 3:
+                        break;
+                    case 6:
+                        break;
+                    case 8:
+                        break;
+                    case 9:
+                        break;
+                    case 11:
+                        break;
+                    case 13:
+                        break;
+                    case 14:
+                        break;
+                    case 16:
+                        break;
+                    case 18:
+                        break;
+                    case 19:
+                        break;
+                    case 21:
+                        break;
+                    case 23:
+                        break;
+                    case 24:
+                        break;
+                    case 26:
+                        break;
+                    case 27:
+                        break;
+                    case 29:
+                        break;
+                    case 31:
+                        break;
+                    case 32:
+                        break;
+                    case 34:
+                        break;
+                    case 37:
+                        break;
+                    case 39:
+                        break;
+                    }
             }
+            else
+            {
+                switch (Player1.GetComponent<Player>().waypointIndex)
+                {
+                    case 1:
+                        break;
+                    case 3:
+                        break;
+                    case 6:
+                        break;
+                    case 8:
+                        break;
+                    case 9:
+                        break;
+                    case 11:
+                        break;
+                    case 13:
+                        break;
+                    case 14:
+                        break;
+                    case 16:
+                        break;
+                    case 18:
+                        break;
+                    case 19:
+                        break;
+                    case 21:
+                        break;
+                    case 23:
+                        break;
+                    case 24:
+                        break;
+                    case 26:
+                        break;
+                    case 27:
+                        break;
+                    case 29:
+                        break;
+                    case 31:
+                        break;
+                    case 32:
+                        break;
+                    case 34:
+                        break;
+                    case 37:
+                        break;
+                    case 39:
+                        break;
+                }
+            }
+            
         }
         else if (dice1.GetComponent<Dice>().turn == 2)
         {
