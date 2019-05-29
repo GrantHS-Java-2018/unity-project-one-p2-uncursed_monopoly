@@ -100,7 +100,12 @@ public class Player : MonoBehaviour
             else
             {
               Debug.Log("movement");
-                    for (int i = 0; i < dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; i++)
+              int IWantToDie = dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value;
+              if (Doubles())
+              {
+                  IWantToDie = IWantToDie / 2;
+              }
+                    for (int i = 0; i < IWantToDie; i++)
                     {
                         if (waypointIndex == 39)
                         {
@@ -125,7 +130,7 @@ public class Player : MonoBehaviour
       
 
   
-            stopRolling = 2;
+            //stopRolling = 2;
             WaypointLocation();
             /*
            if (GetComponent<Dice>().turn == 1 || GetComponent<Dice>().turn == 2)
@@ -175,10 +180,10 @@ public class Player : MonoBehaviour
         bool doubles;
         if (dice2.GetComponent<Dice>().value == dice1.GetComponent<Dice>().value)
         {
-            if (doublesCounter < 3)
+            if (doublesCounter < 12)
             {
                 doublesCounter++;
-                if (doublesCounter == 3)
+                if (doublesCounter == 12)
                 {
                     transform.position = new Vector3(jailWaypoint.transform.position.x,
                         jailWaypoint.transform.position.y, 0);

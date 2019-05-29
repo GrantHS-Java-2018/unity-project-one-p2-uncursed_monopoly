@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7011053}
   - component: {fileID: 7011052}
+  - component: {fileID: 7011054}
   m_Layer: 0
   m_Name: SmallCork
   m_TagString: Untagged
@@ -191,6 +192,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7011054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7011051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf6c87bf87c6b34583f981d0bdfb615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 1350309460}
+  Player2: {fileID: 1844866514}
+  Player3: {fileID: 160705358}
+  dice1: {fileID: 1018770731}
+  dice2: {fileID: 108618999}
+  playerOwnership: 
 --- !u!1001 &28262065
 PrefabInstance:
   m_ObjectHideFlags: 0
