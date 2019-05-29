@@ -6,6 +6,7 @@ using Unity.Collections;
 //using NUnit.Framework.Internal;
 // using TMPro.EditorUtilities;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
     public GameObject chanceGOOFJButton;
     public GameObject ccGOOFJButton;
     public GameObject bail;
+    public GameObject walletText;
 
     // placeholders / future //
 
@@ -42,8 +44,8 @@ public class Player : MonoBehaviour
     public bool inJail = false;
     public int jailCounter = 0;
     public bool chanceGOOFJ = false;
-    public bool ccGOOFJ = false; 
-    
+    public bool ccGOOFJ = false;
+   
     
   
 
@@ -60,8 +62,9 @@ public class Player : MonoBehaviour
         chanceGOOFJButton.SetActive(false);
         ccGOOFJButton.SetActive(false);
         bail.SetActive(false);
-
         
+        uiText();
+       
 
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
             waypointArray[waypointIndex].transform.position.y, 0);
@@ -69,8 +72,13 @@ public class Player : MonoBehaviour
     }
     //ownerCheck(); // placeholder//
 
-
-
+    public void uiText()
+    {
+        
+        walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
+    }
+    
+   
 
 
     // Update is called once per frame
@@ -155,12 +163,13 @@ public class Player : MonoBehaviour
         else
         {
             stopRolling = 1;
+            
         }
     }
 
     void Update()
     {
-
+        
     }
     
 
@@ -207,7 +216,8 @@ public class Player : MonoBehaviour
             //Button.SetActive(false); 
         }
     }
-
+   
+  
     void WaypointLocation()
     {
         Debug.Log("check location " + waypointIndex);
