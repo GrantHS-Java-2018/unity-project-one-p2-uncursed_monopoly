@@ -71,19 +71,18 @@ public class RollButton : MonoBehaviour
     }
     
 
-    void Buy()
+    void Buy(int player)
     {
         if (dice1.GetComponent<Dice>().turn == 1)
         {
             switch (Player1.GetComponent<Player>().waypointIndex)
             {
+                
                 case 1:
-                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 60;
-                    Player1.GetComponent<Player>().ownership[0] = true;
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 60;
                     break;
                 case 3:
                     Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 60;
-                    Player1.GetComponent<Player>().ownership[1] = true;
                     break;
                 case 6:
                     Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 100;
@@ -128,6 +127,7 @@ public class RollButton : MonoBehaviour
                 case 39:
                     break;
             }
+            
             switch (Player1.GetComponent<Player>().waypointIndex)
             {
                 
