@@ -90,49 +90,67 @@ public class RollButton : MonoBehaviour
                     dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 60;
                     break;
                 case 3:
-                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 60;
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 60;
                     break;
                 case 6:
-                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 100;
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 100;
                     break;
                 case 8:
-                    Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet - 100;
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 100;
                     break;
                 case 9:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 120;
                     break;
                 case 11:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 140;
                     break;
                 case 13:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 140;
                     break;
                 case 14:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 160;
                     break;
                 case 16:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 160;
                     break;
                 case 18:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 180;
                     break;
                 case 19:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 200;
                     break;
                 case 21:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 220;
                     break;
                 case 23:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 220;
                     break;
                 case 24:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 240;
                     break;
                 case 26:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 260;
                     break;
                 case 27:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 260;
                     break;
                 case 29:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 280;
                     break;
                 case 31:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 300;
                     break;
                 case 32:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 300;
                     break;
                 case 34:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 320;
                     break;
                 case 37:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 350;
                     break;
                 case 39:
+                    dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet = dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().wallet - 400;
                     break;
             }
             
