@@ -589,6 +589,9 @@ MonoBehaviour:
   chanceGOOFJ: {fileID: 902697312}
   endTurnButton: {fileID: 1130808466}
   playerList: []
+  buyButton: {fileID: 842782731}
+  doNotBuyButton: {fileID: 1905341764}
+  PayButton: {fileID: 1357012524}
 --- !u!1001 &108904106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1074,6 +1077,11 @@ PrefabInstance:
       propertyPath: bail
       value: 
       objectReference: {fileID: 1779520926}
+    - target: {fileID: 2246537015997402757, guid: e4e0ac2c14d3fce4eb71c05850a98736,
+        type: 3}
+      propertyPath: OwnershipClass
+      value: 
+      objectReference: {fileID: 7011051}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e0ac2c14d3fce4eb71c05850a98736, type: 3}
 --- !u!1 &160705358 stripped
@@ -2875,6 +2883,9 @@ MonoBehaviour:
   chanceGOOFJ: {fileID: 902697312}
   endTurnButton: {fileID: 1130808466}
   playerList: []
+  buyButton: {fileID: 842782731}
+  doNotBuyButton: {fileID: 1905341764}
+  PayButton: {fileID: 1357012524}
 --- !u!1001 &1031742936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4496,6 +4507,7 @@ MonoBehaviour:
   - {fileID: 21300004, guid: 7d7fdf2e8cf2efd4eb8066eeefdd36de, type: 3}
   - {fileID: 21300000, guid: f0d484e1d6cbca54dbe32d45991defcf, type: 3}
   - {fileID: 21300002, guid: f0d484e1d6cbca54dbe32d45991defcf, type: 3}
+  mortgage: {fileID: 167317990}
   properyTracker: 0
 --- !u!212 &1496602459
 SpriteRenderer:
@@ -5636,6 +5648,11 @@ PrefabInstance:
       propertyPath: bail
       value: 
       objectReference: {fileID: 1779520926}
+    - target: {fileID: 2246537015997402757, guid: e4e0ac2c14d3fce4eb71c05850a98736,
+        type: 3}
+      propertyPath: OwnershipClass
+      value: 
+      objectReference: {fileID: 7011051}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e0ac2c14d3fce4eb71c05850a98736, type: 3}
 --- !u!1 &1765806103 stripped
@@ -7205,5 +7222,10 @@ PrefabInstance:
       propertyPath: bail
       value: 
       objectReference: {fileID: 1779520926}
+    - target: {fileID: 2246537015997402757, guid: e4e0ac2c14d3fce4eb71c05850a98736,
+        type: 3}
+      propertyPath: OwnershipClass
+      value: 
+      objectReference: {fileID: 7011051}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e0ac2c14d3fce4eb71c05850a98736, type: 3}

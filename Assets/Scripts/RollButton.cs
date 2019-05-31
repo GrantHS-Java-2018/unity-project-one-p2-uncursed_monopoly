@@ -932,281 +932,306 @@ public class RollButton : MonoBehaviour
         else if (dice1.GetComponent<Dice>().turn == 2)
         {
 
-{
-   switch (Player2.GetComponent<Player>().waypointIndex)
-       {
-       case 1:
-           if (BrownCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 4;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 4;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 2;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 2;
-
-           }
-           break;
-       case 3:
-           if (BrownCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 8;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 8;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 4;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 4;
-           }
-           break;
-       case 6:
-           if (LightBlueCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 12;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 12;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 6;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 6;
-           }
-           break;
-       case 8:
-           if (LightBlueCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 12;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 12;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 6;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 6;
-           }
-           break;
-       case 9:
-           if (LightBlueCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 16;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 16;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 8;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 8;
-           }
-           break;
-       case 11:
-           if (PinkCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 20;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 20;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 10;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 10;
-           }
-           break;
-       case 13:
-           if (PinkCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 20;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 20;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 10;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 10;
-           }
-           break;
-       case 14:
-           if (PinkCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 24;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 24;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 12;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 12;
-           }
-           break;
-       case 16:
-           if (OrangeCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 28;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 28;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 14;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 14;
-           }
-           break;
-       case 18:
-           if (OrangeCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 28;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 28;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 14;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 14;
-           }
-           break;
-       case 19:
-           if (OrangeCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 32;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 32;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 16;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 16;
-           }
-           break;
-       case 21:
-           if (RedCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 36;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 36;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 18;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 18;
-           }
-           break;
-       case 23:
-           if (RedCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 36;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 36;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 18;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 18;
-           }
-           break;
-       case 24:
-           if (RedCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 40;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 40;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 20;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 20;
-           }
-           break;
-       case 26:
-           if (YellowCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 44;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 44;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 22;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 22;
-           }
-           break;
-       case 27:
-           if (YellowCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 44;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 44;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 22;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 22;
-           }
-           break;
-       case 29:
-           if (YellowCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 44;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 44;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 24;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 24;
-           }
-           break;
-       case 31:
-           if (GreenCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 52;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 52;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 26;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 26;
-           }
-           break;
-       case 32:
-           if (GreenCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 52;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 52;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 26;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 26;
-           }
-           break;
-       case 34:
-           if (GreenCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 56;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 56;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 28;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 28;
-           }
-           break;
-       case 37:
-           if (DarkBlueCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 70;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 70;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 35;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 35;
-           }
-           break;
-       case 39:
-           if (DarkBlueCollection == true)
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 100;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 100;
-           }
-           else
-           {
-               Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 50;
-               Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 50;
-           }
-           break;
-       
 
 
+            switch (Player2.GetComponent<Player>().waypointIndex)
+            {
+                case 1:
+                    if (BrownCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 4;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 4;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 2;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 2;
+
+                    }
+
+                    break;
+                case 3:
+                    if (BrownCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 8;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 8;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 4;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 4;
+                    }
+
+                    break;
+                case 6:
+                    if (LightBlueCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 12;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 12;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 6;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 6;
+                    }
+
+                    break;
+                case 8:
+                    if (LightBlueCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 12;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 12;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 6;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 6;
+                    }
+
+                    break;
+                case 9:
+                    if (LightBlueCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 16;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 16;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 8;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 8;
+                    }
+
+                    break;
+                case 11:
+                    if (PinkCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 20;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 20;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 10;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 10;
+                    }
+
+                    break;
+                case 13:
+                    if (PinkCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 20;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 20;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 10;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 10;
+                    }
+
+                    break;
+                case 14:
+                    if (PinkCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 24;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 24;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 12;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 12;
+                    }
+
+                    break;
+                case 16:
+                    if (OrangeCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 28;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 28;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 14;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 14;
+                    }
+
+                    break;
+                case 18:
+                    if (OrangeCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 28;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 28;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 14;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 14;
+                    }
+
+                    break;
+                case 19:
+                    if (OrangeCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 32;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 32;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 16;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 16;
+                    }
+
+                    break;
+                case 21:
+                    if (RedCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 36;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 36;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 18;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 18;
+                    }
+
+                    break;
+                case 23:
+                    if (RedCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 36;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 36;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 18;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 18;
+                    }
+
+                    break;
+                case 24:
+                    if (RedCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 40;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 40;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 20;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 20;
+                    }
+
+                    break;
+                case 26:
+                    if (YellowCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 44;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 44;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 22;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 22;
+                    }
+
+                    break;
+                case 27:
+                    if (YellowCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 44;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 44;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 22;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 22;
+                    }
+
+                    break;
+                case 29:
+                    if (YellowCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 44;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 44;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 24;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 24;
+                    }
+
+                    break;
+                case 31:
+                    if (GreenCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 52;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 52;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 26;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 26;
+                    }
+
+                    break;
+                case 32:
+                    if (GreenCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 52;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 52;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 26;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 26;
+                    }
+
+                    break;
+                case 34:
+                    if (GreenCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 56;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 56;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 28;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 28;
+                    }
+
+                    break;
+                case 37:
+                    if (DarkBlueCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 70;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 70;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 35;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 35;
+                    }
+
+                    break;
+                case 39:
+                    if (DarkBlueCollection == true)
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 100;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 100;
+                    }
+                    else
+                    {
+                        Player2.GetComponent<Player>().wallet = Player2.GetComponent<Player>().wallet - 50;
+                        Player1.GetComponent<Player>().wallet = Player1.GetComponent<Player>().wallet + 50;
+                    }
+
+                    break;
 
 
+
+
+
+
+            }
         }
-       
+
     }
 
     void bail()
