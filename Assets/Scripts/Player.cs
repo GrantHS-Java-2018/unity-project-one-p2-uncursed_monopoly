@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     public int jailCounter = 0;
     public bool chanceGOOFJ = false;
     public bool ccGOOFJ = false;
-   
+    public GameObject OwnershipClass;
     
   
 
@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
     public void uiText()
     {
         
-        walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
+     //   walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
     }
     
    
@@ -248,6 +248,7 @@ public class Player : MonoBehaviour
                 break;
             default://properties
                    properties.GetComponent<Properties>().findCard(); 
+                   OwnershipClass.GetComponent<Ownership>().CheckOwnership();
                 break;
         }
         

@@ -42,7 +42,7 @@ public class RollButton : MonoBehaviour
     {
         
         rollButton.onClick.AddListener(TaskOnClick);
-        buyProperties.onClick.AddListener(CheckOwnership);
+        buyProperties.onClick.AddListener(Buy);
         //postBail.onClick.AddListener(bail);
         //getOut.onClick.AddListener(GOOJF);
         //buyHousing.onClick.AddListener(housing);
@@ -79,8 +79,9 @@ public class RollButton : MonoBehaviour
     }
     
 
-    void Buy(int player)
+    void Buy()
     {
+        int player = dice1.GetComponent<Dice>().turn;
         if (dice1.GetComponent<Dice>().turn == 1)
         {
             switch (Player1.GetComponent<Player>().waypointIndex)
@@ -309,7 +310,7 @@ public class RollButton : MonoBehaviour
         }
         
     }
-
+/*
     void CheckOwnership()
     {
         if (dice1.GetComponent<Dice>().turn == 1)
@@ -370,6 +371,7 @@ public class RollButton : MonoBehaviour
             }
         }
     }
+    */
 
     void Payrent()
     {

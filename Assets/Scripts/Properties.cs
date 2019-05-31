@@ -12,8 +12,14 @@ public class Properties : MonoBehaviour
     public GameObject Player3;
     public GameObject dice1, dice2;
     [SerializeField]public Sprite[] properyCards;
+    public GameObject mortgage;
 
     public int properyTracker;
+
+    void Start()
+    {
+        mortgage.SetActive(false);
+    }
     // Start is called before the first frame update
 
     public void findCard()

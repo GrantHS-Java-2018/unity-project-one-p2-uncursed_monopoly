@@ -17,6 +17,12 @@ public class Ownership : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        buyButton.SetActive(false);
+        doNotBuyButton.SetActive(false);
+        PayButton.SetActive(false);
+        playerOwnership = new int [22];
+        //walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
+
     }
 
     // Update is called once per frame
@@ -25,13 +31,9 @@ public class Ownership : MonoBehaviour
         
     }
 
-    public void CheckOwnership(int player)
+    public void CheckOwnership()
     {
-        if (dice1.GetComponent<Dice>().playerList[player - 1].GetComponent<Player>().waypointIndex == playerOwnership[Property.GetComponent<Properties>().properyTracker])
-        {
-            
-        }
-
+        
         if (playerOwnership[Property.GetComponent<Properties>().properyTracker] == 0)
         {
             buyButton.SetActive(true);
@@ -43,9 +45,10 @@ public class Ownership : MonoBehaviour
         }
         else
         {
-            
+            PayButton.SetActive(true);
         }
         
     }
+    
 
 }
