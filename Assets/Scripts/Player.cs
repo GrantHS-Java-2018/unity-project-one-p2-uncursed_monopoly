@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
               Debug.Log("movement");
               int IWantToDie = dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; 
               //calculates dice value
-              if (Doubles())
+              if (Doubles())//code for fixing doubles running doubles
               {
                   IWantToDie = IWantToDie / 2; 
                   // manually fixes an unknown issue. doubles would cause player to move twice what it was supposed to.
