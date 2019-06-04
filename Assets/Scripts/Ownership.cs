@@ -12,7 +12,7 @@ public class Ownership : MonoBehaviour
     public GameObject buyButton;
     public GameObject doNotBuyButton;
     public GameObject PayButton;
-
+    public GameObject endTurnButton;
     public int[] playerOwnership;
     // Start is called before the first frame update
     void Start()
@@ -39,15 +39,18 @@ public class Ownership : MonoBehaviour
         {
             buyButton.SetActive(true);
             doNotBuyButton.SetActive(true);
+            endTurnButton.SetActive(false);
         }
         else if (playerOwnership[Property.GetComponent<Properties>().properyTracker] == dice1.GetComponent<Dice>().turn)
         {
-            
+            endTurnButton.SetActive(true);
         }
         else
         {
             PayButton.SetActive(true);
+            endTurnButton.SetActive(false);
         }
+        
         
     }
 
@@ -56,6 +59,7 @@ public class Ownership : MonoBehaviour
         buyButton.SetActive(false);
         doNotBuyButton.SetActive(false);
         PayButton.SetActive(false);
+        endTurnButton.SetActive(true);
     }
     
 
