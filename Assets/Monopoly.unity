@@ -213,6 +213,7 @@ MonoBehaviour:
   buyButton: {fileID: 842782731}
   doNotBuyButton: {fileID: 1905341764}
   PayButton: {fileID: 1357012524}
+  endTurnButton: {fileID: 1130808466}
   playerOwnership: 
 --- !u!1001 &28262065
 PrefabInstance:
@@ -3383,7 +3384,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074957051 stripped
 GameObject:
@@ -4836,7 +4837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496602457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.58, y: -0.37, z: 0}
+  m_LocalPosition: {x: -7.86, y: -0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
