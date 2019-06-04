@@ -33,6 +33,7 @@ public class Ownership : MonoBehaviour
 
     public void CheckOwnership()
     {
+        stopItGetSomeHelp();
         
         if (playerOwnership[Property.GetComponent<Properties>().properyTracker] == 0)
         {
@@ -48,6 +49,13 @@ public class Ownership : MonoBehaviour
             PayButton.SetActive(true);
         }
         
+    }
+
+    public void stopItGetSomeHelp()
+    {
+        buyButton.SetActive(false);
+        doNotBuyButton.SetActive(false);
+        PayButton.SetActive(false);
     }
     
 
