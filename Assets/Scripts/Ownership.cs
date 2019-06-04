@@ -13,6 +13,7 @@ public class Ownership : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class Ownership : MonoBehaviour
 
     public void CheckOwnership(int player)
     {
-       if (dice1.GetComponent<Dice>().playerList[player-1])
+      // if (dice1.GetComponent<Dice>().playerList[player-1])
     }
 
 }

@@ -27,12 +27,12 @@ public class Player : MonoBehaviour
     public bool [] ownership;
     public GameObject[] propertArray;
     public GameObject properties;
-
+    public GameObject walletText;
     public GameObject chanceGOOFJButton;
     public GameObject ccGOOFJButton;
     public GameObject bail;
-    public GameObject walletText;
 
+    public GameObject walletNum;
     // placeholders / future //
 
     //public String[] chance = new String[]{"Ilinois", "Boardwalk", "Go", "GOOJF", "Back 3", "Marxism", "$50 1", "$50 2", "property tax", "gain $150", "St. Charles", "pay $15", "Go2Jail"};
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         ccGOOFJButton.SetActive(false);
         bail.SetActive(false);
         
-        uiText();
+       
        
 
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
@@ -72,11 +72,7 @@ public class Player : MonoBehaviour
     }
     //ownerCheck(); // placeholder//
 
-    public void uiText()
-    {
-        
-        walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
-    }
+    
     
    
 
