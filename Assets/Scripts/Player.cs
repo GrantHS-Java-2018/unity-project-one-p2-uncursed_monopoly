@@ -15,70 +15,62 @@ public class Player : MonoBehaviour
     public GameObject Button;
 
     // Start is called before the first frame update
-    public GameObject[] waypointArray;
-    private Waypoint currentWaypoint;
-    public GameObject jailWaypoint;
-    private int currentLocation = 0;
-    public int waypointIndex;
-    public int stopRolling = 1;
-    public int wallet = 1500;
-    public int doublesCounter = 0;
+    public GameObject[] waypointArray;// waypoint array
+    private Waypoint currentWaypoint;    //waypoint
+    public GameObject jailWaypoint;// the jail waypoint
+    private int currentLocation = 0; // current location 
+    public int waypointIndex;//waypoint index
+    public int stopRolling = 1;  //tells when to stop rolling
+    public int wallet = 1500;// amount of money
+    public int doublesCounter = 0;// counts number of doubles
     //public String ownership;
-    public bool [] ownership;
-    public GameObject[] propertArray;
-    public GameObject properties;
+    public bool [] ownership;// ownership
+    public GameObject[] propertArray;// array of properties
+    public GameObject properties;// properties
+
+    public GameObject chanceGOOFJButton;// Chance Get out of jail object
+    public GameObject ccGOOFJButton;//Chest get out of jail 
+    public GameObject bail;// bail 
     public GameObject walletText;
-    public GameObject chanceGOOFJButton;
-    public GameObject ccGOOFJButton;
-    public GameObject bail;
 
     public GameObject walletNum;
     // placeholders / future //
-
-    //public String[] chance = new String[]{"Ilinois", "Boardwalk", "Go", "GOOJF", "Back 3", "Marxism", "$50 1", "$50 2", "property tax", "gain $150", "St. Charles", "pay $15", "Go2Jail"};
-   // public String[] chest = new String[]{"get 25", "lose 50", "get 10", "GOOJF", "get 20", "get 100", "capitlism", "get 200", "property tax", "Go", "loose 100", "pay $150", "Go2Jail", "get 45", "get 100"};
-
     
     public String tileType;
-    public int rentvalue;
-    public bool inJail = false;
-    public int jailCounter = 0;
-    public bool chanceGOOFJ = false;
-    public bool ccGOOFJ = false;
-   
+    public int rentvalue;  //rent value
+    public bool inJail = false;  //in jail boolean
+    public int jailCounter = 0;  // jail counter
+    public bool chanceGOOFJ = false; // chance goojf bool
+    public bool ccGOOFJ = false;  //community chest goojf bool
+    public GameObject OwnershipClass;  //ownership class
     
-  
 
-
-
-    void payrent()
+    void Start() // sets up conditions
     {
-        wallet = wallet - rentvalue;
-
-    }
-
-    void Start()
-    {
-        chanceGOOFJButton.SetActive(false);
+       // these hold the jail related stuff
+        chanceGOOFJButton.SetActive(false); 
         ccGOOFJButton.SetActive(false);
         bail.SetActive(false);
         
        
-       
-
+        //  puts waypoints in position and keeps them from falling through z-axis.
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
             waypointArray[waypointIndex].transform.position.y, 0);
 
     }
-    //ownerCheck(); // placeholder//
 
+    public void uiText()
+    {
+        
+     //   walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
+    }
     
     
    
 
 
     // Update is called once per frame
-    public void followWaypoints()
+    public void followWaypoints() // player movement
     {
         //Doubles();
         if (stopRolling == 1)
@@ -96,14 +88,16 @@ public class Player : MonoBehaviour
             else
             {
               Debug.Log("movement");
-              int IWantToDie = dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value;
-              if (Doubles())
+              int IWantToDie = dice2.GetComponent<Dice>().value + dice1.GetComponent<Dice>().value; 
+              //calculates dice value
+              if (Doubles())//code for fixing doubles running doubles
               {
-                  IWantToDie = IWantToDie / 2;
+                  IWantToDie = IWantToDie / 2; 
+                  // manually fixes an unknown issue. doubles would cause player to move twice what it was supposed to.
               }
                     for (int i = 0; i < IWantToDie; i++)
                     {
-                        if (waypointIndex == 39)
+                        if (waypointIndex == 39) // when player hits the last waypoint this sends it back to waypoint zero.
                         {
                             transform.position = new Vector3(waypointArray[0].transform.position.x,
                                 waypointArray[0].transform.position.y, 0);
@@ -244,6 +238,7 @@ public class Player : MonoBehaviour
                 break;
             default://properties
                    properties.GetComponent<Properties>().findCard(); 
+                   OwnershipClass.GetComponent<Ownership>().CheckOwnership();
                 break;
         }
         

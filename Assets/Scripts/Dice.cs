@@ -22,7 +22,10 @@ public class Dice : MonoBehaviour
     public GameObject endTurnButton;
     public List<GameObject> playerList;
     // Start is called before the first frame update
-  
+    public GameObject buyButton;
+    public GameObject doNotBuyButton;
+    public GameObject PayButton;
+ 
     void Start()
     {
         playerList = new List<GameObject>{Player1, Player2, Player3};
@@ -149,6 +152,9 @@ public class Dice : MonoBehaviour
         Debug.Log("endturnEnded");
         
         endTurnButton.SetActive(false);
+        buyButton.SetActive(false);
+        doNotBuyButton.SetActive(false);
+        PayButton.SetActive(false);
    
         
     }
