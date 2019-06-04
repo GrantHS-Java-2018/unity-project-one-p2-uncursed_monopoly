@@ -51,8 +51,13 @@ public class RollButton : MonoBehaviour
         getOutChance.onClick.AddListener(GOOJF);
         getOutCC.onClick.AddListener(GOOJF);
         postBail.onClick.AddListener(bail);
-        
-       // button.onClick.AddListener(Dice, Dice2);
+        doNotBuyProperty.onClick.AddListener(nothing);
+        // button.onClick.AddListener(Dice, Dice2);
+    }
+
+    void nothing()
+    {
+        Ownership.GetComponent<Ownership>().stopItGetSomeHelp();
     }
 
     void endTurnStarter()
@@ -308,6 +313,11 @@ public class RollButton : MonoBehaviour
                     break;
             }
         }
+
+        Ownership.GetComponent<Ownership>().playerOwnership[propertyClass.GetComponent<Properties>().properyTracker] =
+            dice1.GetComponent<Dice>().turn;
+        Ownership.GetComponent<Ownership>().stopItGetSomeHelp();
+        
         
     }
 /*
@@ -1231,7 +1241,8 @@ public class RollButton : MonoBehaviour
 
             }
         }
-
+        
+        Ownership.GetComponent<Ownership>().stopItGetSomeHelp();
     }
 
     void bail()
