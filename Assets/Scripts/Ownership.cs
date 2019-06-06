@@ -13,9 +13,9 @@ public class Ownership : MonoBehaviour
     public GameObject doNotBuyButton;
     public GameObject PayButton;
     public GameObject endTurnButton;
-    public int[] playerOwnership;
+    public int[] playerOwnership;//array that holds information about who owns what property
     // Start is called before the first frame update
-    void Start()
+    void Start()//hides the buttons and sets up the ownership array
     {
         buyButton.SetActive(false);
         doNotBuyButton.SetActive(false);
@@ -31,11 +31,11 @@ public class Ownership : MonoBehaviour
         
     }
 
-    public void CheckOwnership()
+    public void CheckOwnership()//checks who owns what
     {
         stopItGetSomeHelp();
         
-        if (playerOwnership[Property.GetComponent<Properties>().properyTracker] == 0)
+        if (playerOwnership[Property.GetComponent<Properties>().properyTracker] == 0)//if unowned, than allows you to buy it
         {
             buyButton.SetActive(true);
             doNotBuyButton.SetActive(true);

@@ -17,8 +17,8 @@ public class Dice : MonoBehaviour
     public int turn = 1;
     public GameObject Button;   
     public GameObject bail;
-    public GameObject ccGOOFJ;
-    public GameObject chanceGOOFJ;
+    public GameObject ccGOOFJ;//community chest get out of jail free
+    public GameObject chanceGOOFJ;//chance get out of jail free
     public GameObject endTurnButton;
     public List<GameObject> playerList;
     // Start is called before the first frame update
@@ -28,11 +28,11 @@ public class Dice : MonoBehaviour
  
     void Start()
     {
-        playerList = new List<GameObject>{Player1, Player2, Player3};
+        playerList = new List<GameObject>{Player1, Player2, Player3};//creates the list
     }
-    public IEnumerator Roll()
+    public IEnumerator Roll()//rolling method
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)//randomizes the dice faces and stops imitating a role
         {
             int num = Random.Range(0,6) + 1;
             
@@ -43,11 +43,8 @@ public class Dice : MonoBehaviour
             yield return new WaitForSeconds(.10f);
             
         }
-        
-        //StartCoroutine(Player1.GetComponent<Player>().followWaypoints());
      
-        MovePlayer(turn);
-        //Button.SetActive(true);
+        MovePlayer(turn);//starts to move the player
     }
 
     private void MovePlayer(int player)
@@ -58,13 +55,13 @@ public class Dice : MonoBehaviour
         
         Debug.Log("turn 3 roll end");
         
-        if (playerList[player - 1].GetComponent<Player>().Doubles())
+        if (playerList[player - 1].GetComponent<Player>().Doubles()) //if there are doubles, than allows you to roll again
         {
             Button.SetActive(true);
             
             Debug.Log("doubles are present");
 
-            if (playerList[player - 1].GetComponent<Player>().inJail == true)
+            if (playerList[player - 1].GetComponent<Player>().inJail == true)//if in jail than you get out of jail
             {
                 playerList[player - 1].GetComponent<Player>().inJail = false;
                 
@@ -76,7 +73,7 @@ public class Dice : MonoBehaviour
             playerList[player - 1].GetComponent<Player>().stopRolling = 1;
             
         }
-        else
+        else//moves the player normally and allows you to end the turn
         {
             Debug.Log("no Doubles");
             
@@ -93,7 +90,7 @@ public class Dice : MonoBehaviour
 
     }
     
-    public void endTurn()
+    public void endTurn()//if the end turn button is pressed, than the next player goes and the buttons reset
     {
         Debug.Log("endturnActivated");                       
         
