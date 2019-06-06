@@ -6,14 +6,9 @@ using UnityEngine;
 public class PlayerMoney : MonoBehaviour
 
 {
-   
     
-    public GameObject Player1;
-  
-    public GameObject Player2;
-   
-    public GameObject Player3;
-    // I need to create seperate gameobjects for players
+    public GameObject playerObj;
+    // I need to create obj player to refrence multiple players
     //due to the way we created multiple player scripts in one
 
     // Start is called before the first frame update
@@ -28,18 +23,20 @@ public class PlayerMoney : MonoBehaviour
 
     public void UiText()
     {
-        
+        int playerwallet = 0; 
+        //establishing a local variable to make assigning text easier
         
         TextMeshProUGUI moneyText = GetComponent<TextMeshProUGUI>();
-        //establishing textmesh pro in scripts
-        int player1wallet = 0;
-       //establishing a local variable to make assigning text easier
-       
-       player1wallet = Player1.GetComponent<Player>().wallet;
+        //establishing textmesh pro in script
+        
+     
+       playerwallet = playerObj.GetComponent<Player>().wallet;
         //pulling wallet variable from other script
         
-        moneyText.text = "player 1 wallet = " + player1wallet.ToString();
-        //setting the final text the object will display
+       
+        moneyText.text = playerObj.name + " wallet  " + playerwallet.ToString();
+        //assiging textmesh based on local variable
+
         
        
 
