@@ -204,9 +204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf6c87bf87c6b34583f981d0bdfb615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: {fileID: 0}
-  Player2: {fileID: 0}
-  Player3: {fileID: 0}
+  Player1: {fileID: 3229638104971655784}
+  Player2: {fileID: 3229638104569940381}
+  Player3: {fileID: 3229638105506756898}
   dice1: {fileID: 1018770731}
   dice2: {fileID: 108618999}
   Property: {fileID: 1496602457}
@@ -1222,6 +1222,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261181819}
   m_CullTransparentMesh: 0
+--- !u!114 &270020396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270020392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d067ca7317efb34781ab3d0497945f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 3229638104971655784}
+  Player2: {fileID: 3229638104569940381}
+  Player3: {fileID: 3229638105506756898}
 --- !u!1 &270506106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2740009375989766271, guid: ca6907cc6c075a34e8c9e82b1a37c393,
@@ -7074,14 +7089,14 @@ MonoBehaviour:
   ccGOOFJButton: {fileID: 1629367308}
   bail: {fileID: 1779520926}
   walletText: {fileID: 0}
-  walletNum: {fileID: 0}
+  walletNum: {fileID: 270020392}
   tileType: 
   rentvalue: 0
   inJail: 0
   jailCounter: 0
   chanceGOOFJ: 0
   ccGOOFJ: 0
-  OwnershipClass: {fileID: 0}
+  OwnershipClass: {fileID: 7011051}
 --- !u!114 &2246537014474959328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7150,14 +7165,14 @@ MonoBehaviour:
   ccGOOFJButton: {fileID: 1629367308}
   bail: {fileID: 1779520926}
   walletText: {fileID: 0}
-  walletNum: {fileID: 0}
+  walletNum: {fileID: 270020392}
   tileType: 
   rentvalue: 0
   inJail: 0
   jailCounter: 0
   chanceGOOFJ: 0
   ccGOOFJ: 0
-  OwnershipClass: {fileID: 0}
+  OwnershipClass: {fileID: 7011051}
 --- !u!114 &2246537015954069855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7226,14 +7241,14 @@ MonoBehaviour:
   ccGOOFJButton: {fileID: 1629367308}
   bail: {fileID: 1779520926}
   walletText: {fileID: 0}
-  walletNum: {fileID: 0}
+  walletNum: {fileID: 270020392}
   tileType: 
   rentvalue: 0
   inJail: 0
   jailCounter: 0
   chanceGOOFJ: 0
   ccGOOFJ: 0
-  OwnershipClass: {fileID: 0}
+  OwnershipClass: {fileID: 7011051}
 --- !u!212 &2295553556116229105
 SpriteRenderer:
   m_ObjectHideFlags: 0
