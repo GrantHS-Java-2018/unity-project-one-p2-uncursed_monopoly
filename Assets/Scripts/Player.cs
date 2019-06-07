@@ -113,6 +113,7 @@ public class Player : MonoBehaviour
                         if (waypointIndex == 0)
                         {
                             wallet = wallet + 200;
+                            Button.GetComponent<RollButton>().PlayerMoneyupdater();
                         }
         
                     }
@@ -211,6 +212,8 @@ public class Player : MonoBehaviour
     void WaypointLocation()
     {
         Debug.Log("check location " + waypointIndex);
+        properties.GetComponent<Properties>().Card.SetActive(false);
+        OwnershipClass.GetComponent<Ownership>().stopItGetSomeHelp();
         switch (waypointIndex)
         {
             case 7: case 22: case 36://chance
