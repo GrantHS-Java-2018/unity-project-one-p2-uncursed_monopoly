@@ -1408,14 +1408,6 @@ public class RollButton : MonoBehaviour
 
                 }
             }
-           
-            
-
-
-
-
-
-
 
         }else if (dice1.GetComponent<Dice>().turn == 3)
         {
@@ -2095,29 +2087,4 @@ public class RollButton : MonoBehaviour
         
     }
 
-    void housing()
-    {
-        
-    }
-
-    void mortgage()
-    {
-        
-    }
-
-    void end()
-    {
-        
-    }
-
-
-    
-    
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

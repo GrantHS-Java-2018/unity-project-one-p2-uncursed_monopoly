@@ -49,10 +49,7 @@ public class Dice : MonoBehaviour
 
     private void MovePlayer(int player)
     {
-        Debug.Log("turn 3 roll");
-        
-        //Player3.GetComponent<Player>().Doubles();
-        
+        Debug.Log("turn 3 roll");        
         Debug.Log("turn 3 roll end");
         
         if (playerList[player - 1].GetComponent<Player>().Doubles()) //if there are doubles, than allows you to roll again

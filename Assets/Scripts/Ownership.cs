@@ -21,16 +21,9 @@ public class Ownership : MonoBehaviour
         doNotBuyButton.SetActive(false);
         PayButton.SetActive(false);
         playerOwnership = new int [22];
-        //walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
-
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void CheckOwnership()//checks who owns what
     {
         stopItGetSomeHelp();

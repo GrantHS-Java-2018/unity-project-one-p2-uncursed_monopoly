@@ -62,7 +62,6 @@ public class Player : MonoBehaviour
     public void uiText()
     {
         
-     //   walletText.GetComponent<TextMeshProUGUI>().text = "player money" + stopRolling.ToString();
     }
     
     
@@ -79,11 +78,6 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("inJail");
                 WaypointJail();
-                /*
-                chanceGOOFJButton.SetActive(false);
-                ccGOOFJButton.SetActive(false);
-                bail.SetActive(false);
-                */
             }
             else
             {
@@ -123,33 +117,6 @@ public class Player : MonoBehaviour
   
             //stopRolling = 2;
             WaypointLocation();
-            /*
-           if (GetComponent<Dice>().turn == 1 || GetComponent<Dice>().turn == 2)
-            {
-                GetComponent<Dice>().turn++;
-            }
-            */
-            //Button.SetActive(true);
-            /*
-            if (GetComponent<Dice>().turn == 1)
-            {
-                GetComponent<Dice>().turn = 2;
-                Debug.Log("turn 1");
-            }
-            
-            else if (GetComponent<Dice>().turn == 2)
-            {
-                GetComponent<Dice>().turn = 3;
-                Debug.Log("turn 2");
-            }
-            
-            else if (GetComponent<Dice>().turn == 3)
-            {
-                GetComponent<Dice>().turn = 1;
-                Debug.Log("turn 3");
-            }
-            */
-
         }
         else
         {
@@ -157,12 +124,6 @@ public class Player : MonoBehaviour
             
         }
     }
-
-    void Update()
-    {
-        
-    }
-    
 
     public bool Doubles()
     {
@@ -186,15 +147,12 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    //GetComponent<Renderer>().enabled = true                                 
                     Button.SetActive(true);
                     return true;
                 }
             }
             else
             {
-                //GetComponent<Renderer>().enabled = false;
-                //Button.SetActive(false); 
                 doublesCounter = 0;
                 return false;
             }
@@ -204,7 +162,6 @@ public class Player : MonoBehaviour
             doublesCounter = 0;
             Button.SetActive(false);
             return false;
-            //Button.SetActive(false); 
         }
     }
    
@@ -307,44 +264,7 @@ public class Player : MonoBehaviour
         waypointIndex = 10;
         transform.position = new Vector3(waypointArray[waypointIndex].transform.position.x,
             waypointArray[waypointIndex].transform.position.y, 0);
-        //followWaypoints();
     }
-
-    public void communityChance()
-    {
-        
-    }
-
-
-
-
-
-
-
-
-
-/*  
-  if (ownership == "available"){
-          
-  }
-  if (ownership == "yours"){
-      actions(); // placeholder//
-  }
-
-  if (ownership == "theirs"){
-      payrent(); // placehholder//
-      actions();
-  }
-
-  if (ownership == "unownable")
-  {
-      if (tileType == "CC" & tileType == "Chance")  {
-          CCorChance();
-      }
-      actions();
-  }
-  }
-  */
         
 }
 
