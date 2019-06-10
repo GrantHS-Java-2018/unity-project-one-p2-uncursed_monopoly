@@ -61,9 +61,7 @@ public class Dice : MonoBehaviour
             if (playerList[player - 1].GetComponent<Player>().inJail == true)//if in jail than you get out of jail
             {
                 playerList[player - 1].GetComponent<Player>().inJail = false;
-                
-                //turn = 1;
-                
+                                
                 Button.SetActive(false);
             }
 
@@ -73,9 +71,7 @@ public class Dice : MonoBehaviour
         else//moves the player normally and allows you to end the turn
         {
             Debug.Log("no Doubles");
-            
-            //turn = 1;
-            
+                        
             playerList[player - 1].GetComponent<Player>().doublesCounter = 0;
             
             Button.SetActive(false);
